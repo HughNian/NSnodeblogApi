@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Restful接口测试页面</title>
+	<script src="./jquery-1.6.4.min.js"></script>
+	</head>
+
+	<body>
+		接口地址:<input type="text" name="url" id="url" value="127.0.0.1:8008/Client/output">
+		请求类型: <select name="type">
+					<option value="GET">GET</option>
+					<option value="POST">POST</option>
+					<option value="PUT">PUT</option>
+					<option value="DELETE">DELETE</option>
+				  </select>
+		数据类型: <select name="datatype">
+				  <option value="json">json</option>
+				  <option value="xml">xml</option>
+				  </select>
+		CMD:<input type="text" name="cmd" id="cmd" value="">
+		OPT:<input type="text" name="opt" id="opt" value="">
+		<input type="button" id="but" value="提交">
+		<hr />
+		参数:<input type="text" name="param" id="param" class="param" value=""><input type="button" id="addparm" value="添加参数">
+		<br />
+		<hr />
+		结果:
+
+	</body>
+	<script type="text/javascript">
+		$("#but").click(function(){
+			var _url  = $("#url").val(),
+				_type = $("#type").val(),
+				_datatype = $("#datatype").val(),
+				_cmd  = $("#cmd").val(),
+				_opt  = $("#opt").val();
+			if(!_url || !_type || !_cmd || !_opt){
+				alert("请求参数不完全");
+			}
+			_url + "/" + _cmd + "/" + _opt + "/"
+			_data =
+			$.ajax({
+				type:_type,
+				url:_url,
+				data
+				dataType:_datatype,
+				success:function(data){
+
+				}
+			});
+		});
+	</script>
+</html>
