@@ -4,31 +4,95 @@
 	<meta charset="UTF-8">
 	<title>Restful接口测试页面</title>
 	<script src="./jquery-1.6.4.min.js"></script>
+	<link rel="Stylesheet" href="./css/button.css">
+	<style type="text/css">
+		html {font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",  Monaco, "Courier New", Courier, monospace;background:#333;url(./image/1.svg)}
+		.navbar{width:100%;height;48px;background:#8892BF;border-bottom:4px solid #4F5B93;}
+		.fixed-top {position:fixed;right:0;left:0;z-index:1030;margin-bottom:0;top:0}
+		.zi {width:200px;height:48px;line-height:48px;margin-left:50px;font-size:20px;}
+		.testarea {height:auto;width:1500px;margin: 0 auto;margin-top:50px;background:#FFF;border:4px solid #666;}
+		table {margin-top:35px;}
+		td {width:380px;font-size:20px;float:left;margin-left:150px;}
+		select {width:150px;height:30px;font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",  Monaco, "Courier New", Courier, monospace;}
+		.textinput {width:385px;height:35px;line-height:30px;border:1px solid #8892BF;font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",  Monaco, "Courier New", Courier, monospace;font-size:16px;}
+		.paraminput {width:175px;height:35px;line-height:30px;border:1px solid #8892BF;margin-top:10px;font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",  Monaco, "Courier New", Courier, monospace;font-size:16px;}
+		.note {width:800px;height:80px;margin:0 auto; margin-top:30px;border:1px dashed #008000; background:#F0F7FD; font-size:15px;line-height:30px;color:#008000;text-indent:10px;white-space:normal;}
+		.result {width:100%;height:400px;background:#FFF;}
+	</style>
 	</head>
-
+	
 	<body>
-		接口地址:<input type="text" name="url" id="url" value="127.0.0.1:8008/Client/output">
-		请求类型: <select name="type">
-					<option value="GET">GET</option>
-					<option value="POST">POST</option>
-					<option value="PUT">PUT</option>
-					<option value="DELETE">DELETE</option>
-				  </select>
-		数据类型: <select name="datatype">
-				  <option value="json">json</option>
-				  <option value="xml">xml</option>
-				  </select>
-		CMD:<input type="text" name="cmd" id="cmd" value="">
-		OPT:<input type="text" name="opt" id="opt" value="">
-		<input type="button" id="but" value="提交">
-		<hr />
-		参数:<input type="text" name="param" id="param" class="param" value=""><input type="button" id="addparm" value="添加参数">
-		<br />
-		<hr />
-		结果:
-
+		<nav class="navbar fixed-top">
+			<div class="zi"><strong>API Test Page</strong></div>
+		</nav>
+		<div class="testarea">
+			<div class="note">
+				<strong>说明:</strong>api接口地址为类似为:127.0.0.1:8008/user/niansong/123456.json, 请求类型为post。此时接口的就是说明此是登录接口 niansong用户输入密码123456登录，返回json数据。
+			</div>
+			<table width="100%" cellspacing="25"cellpadding="0">
+				<col><col/>
+				<thead></thead>
+				<tr>
+					<td>Api Url(接口地址):</td>
+					<td>
+						<input type="text" name="url" id="url" value="127.0.0.1:8008" class="textinput">
+					</td>
+				</tr>
+				<tr>
+					<td>Request Type(请求类型):</td>
+					<td>
+						 <select name="type">
+							<option value="GET">GET</option>
+							<option value="POST">POST</option>
+							<option value="PUT">PUT</option>
+							<option value="DELETE">DELETE</option>
+						  </select>
+					</td>
+				</tr>
+				<tr>
+					<td>Data Type(数据类型):</td>
+					<td>
+						<select name="datatype">
+						  <option value="json">json</option>
+						  <option value="xml">xml</option>
+						  </select>
+					</td>
+				</tr>
+				<tr>
+					<td>CMD(Controller):</td>
+					<td>
+						<input type="text" name="cmd" id="cmd" value="" class="textinput">
+					</td>
+				</tr>
+				<tr>
+					<td>OPT(Action):</td>
+					<td>
+						<input type="text" name="opt" id="opt" value="" class="textinput">
+					</td>
+				</tr>
+				<tr>
+					<td>Param(参数):</td>
+					<td>
+					<span><input type="text" name="param[]" value="" class="paraminput"> <input type="text" name="param[]" value="" class="paraminput"></span>
+					<input type="button" id="addparm" value="添加参数">
+					</td>
+				<tr>
+			</table>
+			<input type="button" id="but" class="button gray bigrounded" style="margin-left:180px;" value="Submit">
+			
+			<!---------输出结果分割线---------------->
+			<div style="width:100%;height:3px;background:#666;margin-top:30px;"></div>
+			<div class="result">
+				
+			</div>
+		</div>
 	</body>
 	<script type="text/javascript">
+		$("#addparm").click(function(){
+			var input = "<input type='text' name='param[]' class='paraminput'> <input type='text' name='param[]' class='paraminput'>";
+			$(this).prev().append(input);
+		});
+		
 		$("#but").click(function(){
 			var _url  = $("#url").val(),
 				_type = $("#type").val(),
@@ -50,5 +114,6 @@
 				}
 			});
 		});
+		
 	</script>
 </html>
