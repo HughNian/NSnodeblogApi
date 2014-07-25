@@ -1,0 +1,9 @@
+[ 2014-07-23T08:59:20+08:00 ] 127.0.0.1 /user/niansong/123456.json
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.106148s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.063265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.063469s ]
+NOTIC: [8] Use of undefined constant Yar_Concurrent_Client - assumed 'Yar_Concurrent_Client' /home/niansong/www/test/PHP/NsApi/ThinkPHP/Common/functions.php 第 613 行.
+

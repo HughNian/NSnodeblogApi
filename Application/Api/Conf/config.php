@@ -7,6 +7,6 @@ return array(
 	/****************Restful URL规则******************/
 	'URL_ROUTER_ON'   => true,
 	'URL_ROUTE_RULES'=>array(
-	    'user/:username/:password' => array('Client/output?cmd=user&opt=login', 'status=1', array('ext'=>'json')),
+	    'user/login/:username/:password' => array('Client/output?cmd=user&opt=login', 'status=1', array('ext'=>'json')),
 	),
 );

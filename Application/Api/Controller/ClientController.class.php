@@ -26,6 +26,7 @@ class ClientController extends RestController implements ApiConst
 	public function __construct()
 	{
 		parent::__construct();
+		header("Access-Control-Allow-Origin: *"); //支持跨域,测试地址使用(正式环境将关闭)
 	}
 
 	/**
@@ -55,9 +56,19 @@ class ClientController extends RestController implements ApiConst
 		if($this->_type == 'json') { //Rest请求如果为json, 返回json数据
 			if($this->_method == 'get'){
 				$gets = I("get.");
+				$gets['method'] = 'get';
+			}
+			if($this->_method == 'post'){
+				$gets = I("get.");
+				$gets['method'] = 'post';
 			}
 			$data = array('name'=>'niansong', 'sex'=>'男', 'gets'=>$gets);
-			$this->response($data, $this->defaultType);
+			//$json = $this->response($data, $this->defaultType);
+			$json = json_encode($data);
+			if(isset($_GET['callback'])){
+				$json = 'try{' . $_GET['callback'] .'(' . $json . ')}catch(e){}';
+			}
+			echo $json;
 			//$this->Yar_Concurrent_Client::call();
 			//$this->Yar_Concurrent_Client::loop("callback", "error_callback");
 		} 	
