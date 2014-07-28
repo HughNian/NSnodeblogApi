@@ -1,20 +1,19 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 	<head>
 	<meta charset="UTF-8">
 	<title>Restful接口测试页面</title>
-	<link rel="StyleSheet" type="text/css" href="css/style.css" />
-	<script type="text/javascript" src="scripts/json-min.js"></script>
-	<script type="text/javascript" src="scripts/BubbleTooltips.js"></script>
-	<script type="text/javascript" src="scripts/parse.js"></script>
+	<link rel="StyleSheet" type="text/css" href="/Public/css/style.css" />
+	<script type="text/javascript" src="/Public/scripts/BubbleTooltips.js"></script>
+	<script type="text/javascript" src="/Public/scripts/parse.js"></script>
 	<!--[if lt IE 7]>
 	<script defer type="text/javascript" src="scripts/pngfix.js"></script>
 	<![endif]-->
 
-	<script src="scripts/jquery-1.6.4.min.js"></script>
-	<link rel="Stylesheet" href="css/button.css">
+	<script src="/Public/scripts/jquery-2.1.1.js"></script>
+	<link rel="Stylesheet" href="/Public/css/button.css">
 	<style type="text/css">
-		html {font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",  Monaco, "Courier New", Courier, monospace;background:#333 url(images/1.svg)}
+		html {font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",  Monaco, "Courier New", Courier, monospace;background:#333 url(/Public/images/1.svg)}
 		.navbar{width:100%;height;48px;background:#8892BF;border-bottom:4px solid #4F5B93;}
 		.fixed-top {position:fixed;right:0;left:0;z-index:1030;margin-bottom:0;top:0}
 		.zi {width:200px;height:48px;line-height:48px;margin-left:210px;font-size:20px;}
@@ -110,11 +109,6 @@
 				$(this).prev().append(input);
 			});
 		
-			function pjson(data)
-			{
-				console.log(data);
-			}
-
 			$("#commit").click(function(){
 				var _url  = $("#url").val(),
 					_type = $("#type").val(),
@@ -125,7 +119,7 @@
 					alert("请填写完整数据再提交");
 					return;
 				}
-				var _data = "";
+				var _data = {'Accept':'application/json'};
 				_url += '/' + _cmd + '/' + _opt;
 				var param = "";
 				var text = $("#text");
@@ -137,20 +131,18 @@
 				_url += '.' + _datatype;
 				console.log(_url);
 				console.log(_type);
+				var text = $("#text");
 				$.ajax({
 					type:_type,
+					method:_type,
 					url: _url,
-					//dataType:"jsonp",
-					//converters:{
-					//	'jsonp':pjson,
-					//},
-					crossDomain: true,
 					dataType:"json",
-					contentType:"json",
-					headers: {'Accept': 'application/json'},
+					contentType:"application/json",
+					data: _data,
 					cache:false,
 					success:function(ret){
 						console.log(ret);
+						var h = text.html(ret);
 					},
 					error:function(req, status, error){
 						console.log(error);
