@@ -12,6 +12,7 @@ namespace Api\Controller;
 
 use Think\Controller\RestController;
 use Api\Constant\ApiConst;
+use Api\Libs\YarClient;
 
 class ClientController extends RestController implements ApiConst
 {
@@ -20,8 +21,6 @@ class ClientController extends RestController implements ApiConst
 	protected $allowType   = array("json", "xml", "html");
 	protected $defaultType = 'json';
 	protected $allowOutputType = array( 'xml' => 'application/xml', 'json' => 'application/json','html' => 'text/html');
-
-	private $Yar_Concurrent_Client = Yar_Concurrent_Client;
 
 	public function __construct()
 	{
@@ -37,7 +36,7 @@ class ClientController extends RestController implements ApiConst
 	 */
 	public function callback($reval, $callinfo)
 	{
-		
+		var_dump($retval);
 	}
 
 	/**
@@ -46,7 +45,7 @@ class ClientController extends RestController implements ApiConst
 	 */
 	public function error_callback($type, $error, $callinfo)
 	{
-	
+		 error_log($error);
 	}
 	
 	/**
@@ -56,30 +55,49 @@ class ClientController extends RestController implements ApiConst
 	public function output()
 	{	
 		if($this->_type == 'json') { //Rest请求如果为json, 返回json数据
-			if($this->_method == 'get'){
-					$gets = I("get.");
-					$gets['method'] = 'get';
+			if(!in_array($this->_method, $this->allowMethod)){
+				$ret = array('error'=>'请求类型出错');
+				$this->response($ret, $this->defaultType);
 			}
-			if($this->_method == 'post'){
-				$gets = I("get.");
-				$gets['method'] = 'post';
+			$req = array();
+			$req = I("get.");
+			$req['method'] = $this->_method;
+			
+			if(!$req){
+				$ret = array('error'=>'请求出错！');
+				$this->response($ret, $this->defaultType);
 			}
-			$data = array('name'=>'niansong', 'sex'=>'男', 'gets'=>$gets);
-			$this->response($data, $this->defaultType);
-			if(isset($_GET['callback'])){ //jsonp 请求只能是get方式
+			
+			if(!$req['cmd']){
+				$ret = array('error'=>'缺少cmd参数');
+				$this->response($ret, $this->defaultType);
+			}
+			
+			/*
+			if(isset($_GET['callback'])){ //jsonp 请求只能是get方式 CORS跨域
 				$json = 'try{' . $_GET['callback'] .'(' . $json . ')}catch(e){}';
 				echo $json;
-			}
-			//$this->Yar_Concurrent_Client::call();
-			//$this->Yar_Concurrent_Client::loop("callback", "error_callback");
+			}*/
+			
+			$url = C('HOST') . '/' . $req['cmd'];
+			$YarClient = new YarClient();
+			$YarClient->url = $url;
+			$YarClient->method = "login";
+			$YarClient->params = array(1,2);
+			$YarClient->run();
+			$ret = $YarClient->mycallback();
+			$error = $YarClient->myerror_callback();
 		} 	
 		
 		if($this->_type == 'xml') { //Rest请求如果为xml, 返回xml数据
-		
+			//$this->response($data, xml); //由于测试页面暂时没有支持xml这里服务端暂时不支持xml
+			$ret = array('error' => '暂时不支持xml类型');
+			$this->response($ret, $this->defaulType);
 		}
 
 		if($this->_type == 'html') { //Rest请求如果为html,就是通过网页浏览器器访问
-			exit('here');
+			$ret = array('error' => '暂时不支持html类型');
+			$this->response($ret, $this->defaulType);
 		}
 	}
 

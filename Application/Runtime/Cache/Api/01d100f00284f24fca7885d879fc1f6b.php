@@ -34,7 +34,7 @@
 		</nav>
 		<div class="testarea">
 			<div class="note">
-				<strong>说明:</strong>api接口地址为类似为:127.0.0.1:8008/user/niansong/123456.json, 请求类型为post。此时接口的就是说明此是登录接口 niansong用户输入密码123456登录，返回json数据。
+				<strong>说明:</strong>例如登录接口，地址为:127.0.0.1:8008/user/niansong/123456.json, 请求类型为GET。此接口就是niansong用户,密码123456登录，返回用户niansong的用户信息，返回的数据格式为json。
 			</div>
 			<table width="100%" cellspacing="25"cellpadding="0" id="apitable">
 				<col><col/>
@@ -134,7 +134,7 @@
 					return;
 				}
 				var _data = {'Accept':'application/json'};
-				_url += '/' + _cmd + '/' + _opt;
+				_url += '/' + _cmd + '/' +  _opt;
 				var param = "";
 				var text = $("#text");
 				$(".paraminput").each(function(){
@@ -159,8 +159,8 @@
 						$("#submit").click();
 					},
 					error:function(req, status, error){
-						console.log(error);
-						console.log(status);
+						alert(error);
+						//alert(status);
 					}
 				});
 			});

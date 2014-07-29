@@ -13,10 +13,14 @@ namespace Api\Controller;
 use Think\Controller\YarController;
 use Api\Constant\ApiConst;
 
-class ServerController extends YarController implements ApiConstant
+class ServerController extends YarController implements ApiConst
 {
 	public function __construct()
 	{
 		parent::__construct();
+
+		$vars = get_class_vars();
+
+		print_r($vars);exit;
 	}
 }
