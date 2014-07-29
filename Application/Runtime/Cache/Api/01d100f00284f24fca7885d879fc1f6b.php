@@ -10,7 +10,7 @@
 	<script defer type="text/javascript" src="scripts/pngfix.js"></script>
 	<![endif]-->
 
-	<script src="/Public/scripts/jquery-2.1.1.js"></script>
+	<script src="/Public/scripts/jquery-1.6.4.min.js"></script>
 	<link rel="Stylesheet" href="/Public/css/button.css">
 	<style type="text/css">
 		html {font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",  Monaco, "Courier New", Courier, monospace;background:#333 url(/Public/images/1.svg)}
@@ -108,7 +108,21 @@
 				var input = "<input type='text' name='param[]' class='paraminput'>";
 				$(this).prev().append(input);
 			});
-		
+			
+			// JSON转换为字符串
+			function JSONstringify(Json){
+				if($.browser.msie){
+					if($.browser.version=="7.0"||$.browser.version=="6.0"){
+						var  result=jQuery.parseJSON(Json);
+					}else{
+						var result=JSON.stringify(Json);   
+					}		
+				}else{
+					var result=JSON.stringify(Json);			
+				}
+				return result;
+			}
+
 			$("#commit").click(function(){
 				var _url  = $("#url").val(),
 					_type = $("#type").val(),
@@ -130,7 +144,6 @@
 				if(param != "") _url += param;
 				_url += '.' + _datatype;
 				console.log(_url);
-				console.log(_type);
 				var text = $("#text");
 				$.ajax({
 					type:_type,
@@ -141,8 +154,9 @@
 					data: _data,
 					cache:false,
 					success:function(ret){
-						console.log(ret);
-						var h = text.html(ret);
+						var data = JSONstringify(ret);
+						text.html(data);
+						$("#submit").click();
 					},
 					error:function(req, status, error){
 						console.log(error);
@@ -150,5 +164,6 @@
 					}
 				});
 			});
+			
 	</script>
 </html>

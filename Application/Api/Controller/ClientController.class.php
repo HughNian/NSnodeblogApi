@@ -29,7 +29,6 @@ class ClientController extends RestController implements ApiConst
 		if($_GET['callback']){	
 			header("Access-Control-Allow-Origin: *"); //支持CORS跨域,测试api网页地址使用,但ajax请求的数据类型只能为jsonp,所以请求类型只能是get请求。
 		}
-		header('Content-type: application/json');
 	}
 
 	/**
@@ -66,10 +65,7 @@ class ClientController extends RestController implements ApiConst
 				$gets['method'] = 'post';
 			}
 			$data = array('name'=>'niansong', 'sex'=>'男', 'gets'=>$gets);
-			//
-			//$this->response($data, $this->defaultType);
-			$json = json_encode($data);
-			echo $json;
+			$this->response($data, $this->defaultType);
 			if(isset($_GET['callback'])){ //jsonp 请求只能是get方式
 				$json = 'try{' . $_GET['callback'] .'(' . $json . ')}catch(e){}';
 				echo $json;

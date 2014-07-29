@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<title>Restful接口测试页面</title>
 	<link rel="StyleSheet" type="text/css" href="css/style.css" />
-	<script type="text/javascript" src="scripts/json-min.js"></script>
 	<script type="text/javascript" src="scripts/BubbleTooltips.js"></script>
 	<script type="text/javascript" src="scripts/parse.js"></script>
 	<!--[if lt IE 7]>
@@ -109,7 +108,21 @@
 				var input = "<input type='text' name='param[]' class='paraminput'>";
 				$(this).prev().append(input);
 			});
-		
+			
+			// JSON转换为字符串
+			function JSONstringify(Json){
+				if($.browser.msie){
+					if($.browser.version=="7.0"||$.browser.version=="6.0"){
+						var  result=jQuery.parseJSON(Json);
+					}else{
+						var result=JSON.stringify(Json);   
+					}		
+				}else{
+					var result=JSON.stringify(Json);			
+				}
+				return result;
+			}
+
 			function pjson(data)
 			{
 				console.log(data);
@@ -140,17 +153,18 @@
 				$.ajax({
 					type:_type,
 					url: _url,
-					//dataType:"jsonp",
-					//converters:{
-					//	'jsonp':pjson,
-					//},
+					dataType:"jsonp",
+					converters:{
+						'jsonp':pjson,
+					},
 					crossDomain: true,
-					dataType:"json",
 					contentType:"json",
 					headers: {'Accept': 'application/json'},
 					cache:false,
 					success:function(ret){
-						console.log(ret);
+						var data = JSONstringify(ret);
+						$("#text").html(data);
+						$("#submit").click();
 					},
 					error:function(req, status, error){
 						console.log(error);
