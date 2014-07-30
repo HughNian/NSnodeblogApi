@@ -10,8 +10,8 @@ return array(
 	'URL_ROUTE_RULES'=>array(
 		
 		/***USER API***/
-	    'user/login/:username/:password' => array('Client/output?cmd=user', 'status=0', array('ext'=>'json')),
-		'user/register/:username/:password' => array('Client/output?cmd=user', 'status=1', array('ext'=>'json')),
+	    'user/login/:params' => array('Client/output?cmd=user&opt=login', 'status=0'),
+		'user/register/:params' => array('Client/output?cmd=user&opt=register', 'status=1'),
 
 	),
 );

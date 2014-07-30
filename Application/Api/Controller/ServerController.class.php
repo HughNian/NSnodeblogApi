@@ -18,9 +18,21 @@ class ServerController extends YarController implements ApiConst
 	public function __construct()
 	{
 		parent::__construct();
+	}
 
-		$vars = get_class_vars();
-
-		print_r($vars);exit;
+	/**
+	 *
+	 * 此非api接口
+	 *
+	 */
+	protected function extractParams($params) 	
+	{
+		$argcs = explode(',', $params);
+			
+		if(!$argcs){
+			return array("code"=>1002, "msg"=>"参数写法有误");
+		}
+		
+		return $argcs;
 	}
 }

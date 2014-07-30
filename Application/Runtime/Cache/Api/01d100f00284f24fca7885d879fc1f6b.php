@@ -23,7 +23,7 @@
 		#apitable select {width:150px;height:30px;font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",  Monaco, "Courier New", Courier, monospace;}
 		.textinput {width:385px;height:35px;line-height:30px;border:1px solid #8892BF;font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",  Monaco, "Courier New", Courier, monospace;font-size:16px;}
 		.paraminput {width:385px;height:35px;line-height:30px;border:1px solid #8892BF;margin-top:10px;font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",  Monaco, "Courier New", Courier, monospace;font-size:16px;}
-		.note {width:900px;height:80px;margin:0 auto; margin-top:30px;border:1px dashed #008000; background:#F0F7FD; font-size:15px;line-height:30px;color:#008000;text-indent:10px;white-space:normal;}
+		.note {width:900px;min-height:80px;margin:0 auto; margin-top:30px;border:1px dashed #008000; background:#F0F7FD; font-size:15px;line-height:30px;color:#008000;text-indent:10px;white-space:normal;}
 		#result {width:100%;height:auto;background:#FFF;margin-top:15px;}
 	</style>
 	</head>
@@ -34,7 +34,9 @@
 		</nav>
 		<div class="testarea">
 			<div class="note">
-				<strong>说明:</strong>例如登录接口，地址为:127.0.0.1:8008/user/niansong/123456.json, 请求类型为GET。此接口就是niansong用户,密码123456登录，返回用户niansong的用户信息，返回的数据格式为json。
+				<strong>说明:</strong>
+				<li>例如登录接口，地址为:127.0.0.1:8008/user/niansong/123456.json, 请求类型为GET。此接口就是niansong用户,密码123456登录，返回用户niansong的用户信息，返回的数据格式为json。</li>			   
+				<li>参数填写需要注意，如果多个参数以英文,分割。如果请求的接口为加密接口则需要填写加密后的参数值。</li>
 			</div>
 			<table width="100%" cellspacing="25"cellpadding="0" id="apitable">
 				<col><col/>
@@ -81,7 +83,7 @@
 					<td>Param(参数):</td>
 					<td>
 					<span><input type="text" name="param[]" value="" class="paraminput"></span>
-					<input type="button" id="addparm" value="添加参数" class="button gray small">
+					<!--<input type="button" id="addparm" value="添加参数" class="button gray small">-->
 					</td>
 				<tr>
 			</table>
@@ -133,6 +135,10 @@
 					alert("请填写完整数据再提交");
 					return;
 				}
+				if(_datatype == 'xml'){
+					alert("暂时不支持xml数据");
+					return;
+				}
 				var _data = {'Accept':'application/json'};
 				_url += '/' + _cmd + '/' +  _opt;
 				var param = "";
@@ -149,7 +155,7 @@
 					type:_type,
 					method:_type,
 					url: _url,
-					dataType:"json",
+					dataType:_datatype,
 					contentType:"application/json",
 					data: _data,
 					cache:false,

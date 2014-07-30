@@ -2,6 +2,11 @@
 
 namespace Api\Controller;
 
+/***
+ * @todo:用户接口
+ *
+ *
+ */
 class UserController extends ServerController
 {
 	public $funcType = array();
@@ -27,12 +32,21 @@ class UserController extends ServerController
 	 * @type: GET
      *
 	 * @return {json} list -用户信息
+	 *
 	 */
-	public function login($a, $b)
-	{
-		$a = $a+$b;
-		$b = $a*$b;
-		return json_encode(array('a' =>$a,'b'=>$b));
+	public function login($params, $cmd, $opt, $status, $method)
+	{	
+		$this->checkRequest($opt, $status, $method, $this->funcType);
+
+		$username = $password = NULL;
+		$argcs = $this->extractParams($params);
+		
+		extract($argcs, EXTR_OVERWRITE);
+
+		if(!$username || !$password){
+			return array('code'=>1001);
+		}
+		return array("code"=>1000, "username"=>$username, "password"=>$password);
 	}
 
 	/**
@@ -44,9 +58,11 @@ class UserController extends ServerController
 	 * @type: POST
      *
 	 * @return {json} list -用户信息
+	 *
 	 */
 	public function register()
 	{
 	
 	}
+
 }

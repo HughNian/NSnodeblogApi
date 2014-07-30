@@ -26,6 +26,10 @@ define('DEFAULT_CONTROLLER', 'Client');
 //绑定api模块
 define('BIND_MODULE', 'Api');
 
+require './yar-client.php';
+$YarClient = new YarClient();
+$hehe = '111222';
+
 // 引入ThinkPHP入口文件
 require './ThinkPHP/ThinkPHP.php';
 

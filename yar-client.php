@@ -1,12 +1,11 @@
 <?php
+if(!defined('APP_PATH')) exit("No direct script access allowed");
 /**
- * @todo:Yar php操作类 (主要支持并行yar请求)
+ * @todo:Yar php操作类 (主要支持并行yar请求,带成功和失败回调)
  *
  * @author: hughnian
  *
  */
-
-namespace Api\Libs;
 
 class YarClient
 {
@@ -15,6 +14,13 @@ class YarClient
 	public $params = array();
 	public $ret    = array();
 	public $error  = array();
+	
+	public function __construct()
+	{
+		//判断扩展是否存在
+        if(!extension_loaded('yar'))
+            exit('yar extension not exists');
+	}
 
 	public function setUrl($url)
 	{
@@ -31,20 +37,20 @@ class YarClient
 		$this->params = $params;
 	}
 
-	public function setcallback($reval, $callinfo)
+	public function setRet($reval, $callinfo)
 	{
 		$this->ret = array('reval'=>$reval, 'callinfo'=>$callinfo);
 	}
 
-	public function seterror_callback($type, $error, $callinfo)
+	public function setError($type, $error, $callinfo)
 	{
 		$this->error = array('type'=>$type, 'error'=>$error, 'callinfo'=>$callinfo);
 	}
 
 	public function run()
 	{	
-		\Yar_Concurrent_Client::call($this->url, $this->method, $this->params, "callback", "error_callback");
-		\Yar_Concurrent_Client::loop();
+		Yar_Concurrent_Client::call($this->url, $this->method, $this->params, "callback", "error_callback");
+		Yar_Concurrent_Client::loop();
 	}
 }
 
@@ -58,7 +64,7 @@ $YarClient = new YarClient();
 function callback($reval, $callinfo)
 {
 	global $YarClient;
-	$YarClient->mycallback($reval, $callinfo);
+	$YarClient->setRet($reval, $callinfo);
 }
 
 /**
@@ -69,5 +75,5 @@ function callback($reval, $callinfo)
 function error_callback($type, $error, $callinfo)
 {
 	global $YarClient;
-	$YarClient->myerror_callback($type, $error, $callinfo);
+	$YarClient->setError($type, $error, $callinfo);
 }

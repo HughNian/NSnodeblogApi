@@ -12,7 +12,6 @@ namespace Api\Controller;
 
 use Think\Controller\RestController;
 use Api\Constant\ApiConst;
-use Api\Libs\YarClient;
 
 class ClientController extends RestController implements ApiConst
 {
@@ -21,31 +20,41 @@ class ClientController extends RestController implements ApiConst
 	protected $allowType   = array("json", "xml", "html");
 	protected $defaultType = 'json';
 	protected $allowOutputType = array( 'xml' => 'application/xml', 'json' => 'application/json','html' => 'text/html');
+	private   $YarClient = NULL;
+	protected $ret   = array();
+	protected $error = array();
 
 	public function __construct()
 	{
 		parent::__construct();
-		if($_GET['callback']){	
-			header("Access-Control-Allow-Origin: *"); //支持CORS跨域,测试api网页地址使用,但ajax请求的数据类型只能为jsonp,所以请求类型只能是get请求。
-		}
+		global $YarClient;
+		$this->YarClient = $YarClient;
 	}
 
 	/**
 	 * @todo:yar成功回调
 	 *
 	 */
-	public function callback($reval, $callinfo)
+	public function mycallback()
 	{
-		var_dump($retval);
+		$ret = $this->YarClient->ret;
+		if($ret){
+			$json = $ret['reval'];
+			$this->response($json, $this->defaultType);
+		} else {
+			$this->myerror_callback();
+		}
 	}
 
 	/**
 	 * @todo:yar失败回调
 	 *
 	 */
-	public function error_callback($type, $error, $callinfo)
+	public function myerror_callback()
 	{
-		 error_log($error);
+		$error = $this->YarClient->error;
+		error_log($error);
+		$this->response($error['error'], $this->defaultType);
 	}
 	
 	/**
@@ -73,20 +82,22 @@ class ClientController extends RestController implements ApiConst
 				$this->response($ret, $this->defaultType);
 			}
 			
-			/*
-			if(isset($_GET['callback'])){ //jsonp 请求只能是get方式 CORS跨域
-				$json = 'try{' . $_GET['callback'] .'(' . $json . ')}catch(e){}';
-				echo $json;
-			}*/
+			if(!$req['opt']){
+				$ret = array('error'=>'缺少opt参数');
+				$this->response($ret, $this->defaultType);
+			}
+			
+			if(isset($req['Accept'])) unset($req['Accept']);
+			if(isset($req['_'])) unset($req['_']);
 			
 			$url = C('HOST') . '/' . $req['cmd'];
-			$YarClient = new YarClient();
-			$YarClient->url = $url;
-			$YarClient->method = "login";
-			$YarClient->params = array(1,2);
-			$YarClient->run();
-			$ret = $YarClient->mycallback();
-			$error = $YarClient->myerror_callback();
+			$this->YarClient->url = $url;
+			$this->YarClient->method = $req['opt'];
+			$this->YarClient->params = $req;
+			$this->YarClient->run();
+			
+			//yar回调
+			$this->mycallback();
 		} 	
 		
 		if($this->_type == 'xml') { //Rest请求如果为xml, 返回xml数据
