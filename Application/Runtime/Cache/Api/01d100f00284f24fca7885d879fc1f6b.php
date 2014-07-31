@@ -35,8 +35,8 @@
 		<div class="testarea">
 			<div class="note">
 				<strong>说明:</strong>
-				<li>例如登录接口，地址为:127.0.0.1:8008/user/niansong/123456.json, 请求类型为GET。此接口就是niansong用户,密码123456登录，返回用户niansong的用户信息，返回的数据格式为json。</li>			   
-				<li>参数填写需要注意，如果多个参数以英文,分割。如果请求的接口为加密接口则需要填写加密后的参数值。</li>
+				<li>例如登录接口，地址为:127.0.0.1:8008/user/login/{"username":"niansong","password":"123456"}.json, 请求类型为GET，返回的数据格式为json。</li>			   
+				<li>参数填写，请填写JSON数据。如果请求的接口为加密接口则需要填写加密后的参数值。</li>
 			</div>
 			<table width="100%" cellspacing="25"cellpadding="0" id="apitable">
 				<col><col/>
@@ -82,7 +82,7 @@
 				<tr>
 					<td>Param(参数):</td>
 					<td>
-					<span><input type="text" name="param[]" value="" class="paraminput"></span>
+					<span><input type="text" name="param" value="" class="paraminput"></span>
 					<!--<input type="button" id="addparm" value="添加参数" class="button gray small">-->
 					</td>
 				<tr>

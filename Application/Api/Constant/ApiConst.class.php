@@ -4,7 +4,10 @@ namespace Api\Constant;
 
 interface ApiConst
 {
-	const API_SERVER_HOST = "http://127.0.0.1:8008/Server/"; //API接口服务端地址，绝对地址
+	const DEFAULT_PAGE = 1;                                                //默认页
+	const PAGE_NUMBER  = 20;		                                       //每页显示的条数
+	const API_HOST     = 'http://127.0.0.1:8008';                          //接口地址
+	const DEL_STATUS_NO = 0;                                               //删除状态(未删除)
+	const DEL_STATUS_YES = 1;					                           //删除状态(已删除)
 
-	const RQ_SUCCESS = 1000; //接口成功返回值
 }

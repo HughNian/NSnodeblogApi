@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<style type="text/css">
+.star{
+	color: red;
+}
+h3{
+	color: red;
+}
+.codeTable{
+	margin: 0 0 0 50px;
+	width: 550px;
+	background-color: #7BA0CD;
+}
+.codeTable th,.codeTable td{
+	padding: 2px;
+	font-size: 14px;
+	height: 25px;
+	background-color: #D3DFEE;
+	font-family: "Consolas";
+}
+.codeTable td.value{
+	width: 80px;
+}
+.codeTable td.desc{
+	text-align: left;
+}
+.codeTable td.module{
+	font-weight: bold;
+	text-align: center;
+	background-color: #A7BFDE;
+}
+.wp{
+	margin: 10px 0 0 50px;
+	height: 300px;
+	text-align: left;
+}
+.index{
+	padding: 20px;
+	font-family: tahoma,verdana;
+	border-left: 2px solid #A7BFDE;
+}
+.index p{
+	font-size: 36px;
+}
+.index p.b{
+	font-size: 48px;
+}
+.index p.xs{
+	font-size: 12px;
+}
+p.warning{
+	margin: 10px 0 0 50px;
+	padding: 5px;
+	width: 550px;
+	height: 25px;
+	line-height: 25px;
+	color: red;
+	background-color: #FB9D9B;
+	border: 1px solid #f00;
+}
+</style>
+</head>
+<body>
+<div class="wp">
+	<div class="index">
+		<p class="b">接口返回错误码</p>
+		<p>接口文档</p>
+	</div>
+</div>
+<table cellspacing="1" class="codeTable">
+<tr><td class="module">模块</td><td class="module">返回值定义</td></tr></thead>
+<tr><td class="value"><!--{$success.CODE}--></td><td class="desc"><!--{$success.DESC}--></td></tr>
+<tr><td class="module">模块</td><td class="module">系统错误码</td></tr></thead>
+<!--{foreach from=$errors key=key item=val}-->
+<tr><td class="value"><!--{$val.CODE}--></td><td class="desc"><!--{$val.DESC}--></td></tr>
+<!--{/foreach}-->
+</table>
+</body></html>

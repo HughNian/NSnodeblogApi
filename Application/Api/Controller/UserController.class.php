@@ -9,18 +9,18 @@ namespace Api\Controller;
  */
 class UserController extends ServerController
 {
-	public $funcType = array();
+	public $funcType;
 
 	public function __construct()
 	{
-		parent::__construct();
 		$this->funcType = array(
-			array('opt' => 'login', 'type'=>'get'),
-			array('opt' => 'register', 'type' =>'post'),
-			array('opt' => 'edit', 'type' =>'put'),
-			array('opt' => 'del', 'type' => 'delete'),
-			array('opt' => 'repwd', 'type' => 'post'),
+			array('opt' => 'login', 'type'=>'get', 'encrypt' => 0),
+			array('opt' => 'register', 'type' =>'post', 'encrypt' => 0),
+			array('opt' => 'edit', 'type' =>'put', 'encrypt' => 0),
+			array('opt' => 'del', 'type' => 'delete', 'encrypt' => 0),
+			array('opt' => 'repwd', 'type' => 'post', 'encrypt' => 0),
 		);
+		parent::__construct();
 	}
 
 	/**
@@ -34,19 +34,20 @@ class UserController extends ServerController
 	 * @return {json} list -用户信息
 	 *
 	 */
-	public function login($params, $cmd, $opt, $status, $method)
+	public function login($params, $status, $method)
 	{	
-		$this->checkRequest($opt, $status, $method, $this->funcType);
-
-		$username = $password = NULL;
-		$argcs = $this->extractParams($params);
-		
-		extract($argcs, EXTR_OVERWRITE);
-
-		if(!$username || !$password){
-			return array('code'=>1001);
+		$ret = $this->checkRequest($params, $status, $method, $this->funcType);//检测客户端请求，并解析参数
+		if(!$ret['ret'] && $ret['code'] == $this->errors['RQ_TYPE_ERROR']['CODE']) {
+			return $this->data($this->errors['RQ_TYPE_ERROR']['CODE']);
 		}
-		return array("code"=>1000, "username"=>$username, "password"=>$password);
+		
+		$username = $password = NULL;
+		$argcs = $this->argcs;
+		extract($argcs, EXTR_OVERWRITE);
+		if(!$username || !$password){
+			return $this->data($this->errors['RQ_PARAMS_NOT_EXISTS']['CODE']);
+		}
+		return $this->data(C('RQ_SUCCESS.CODE'), $argcs);
 	}
 
 	/**

@@ -97,6 +97,7 @@ CheckLangBehavior	ThinkPHP/Library/Behavior/CheckLangBehavior.class.php	/^class 
 ChromePhp	ThinkPHP/Library/Behavior/ChromeShowPageTraceBehavior.class.php	/^class ChromePhp{$/;"	c
 ChromeShowPageTraceBehavior	ThinkPHP/Library/Behavior/ChromeShowPageTraceBehavior.class.php	/^class ChromeShowPageTraceBehavior {$/;"	c
 ClientController	Application/Api/Controller/ClientController.class.php	/^class ClientController extends RestController implements ApiConst$/;"	c
+Close	Application/Api/Libs/HttpDownload.class.php	/^	public function Close(){$/;"	f
 Co	ThinkPHP/Library/Vendor/EaseTemplate/template.core.php	/^				$Co	 	= explode(":",$Nums[1]);$/;"	v
 CodeSwitch	ThinkPHP/Library/Org/Util/CodeSwitch.class.php	/^class CodeSwitch {$/;"	c
 CodingSwitch	ThinkPHP/Library/Org/Util/CodeSwitch.class.php	/^	static function CodingSwitch($app = ".\/",$charset='UTF-8',$mode = "FILES",$file_types = array(".html",".php")) {$/;"	f
@@ -115,6 +116,7 @@ Copyright	ThinkPHP/Library/Vendor/EaseTemplate/template.core.php	/^		$this->Copy
 CronRunBehavior	ThinkPHP/Library/Behavior/CronRunBehavior.class.php	/^class CronRunBehavior {$/;"	c
 Crypt	ThinkPHP/Library/Think/Crypt.class.php	/^class Crypt {$/;"	c
 Crypt	ThinkPHP/Library/Think/Crypt/Driver/Crypt.class.php	/^class Crypt {$/;"	c
+Crypt3Des	Application/Api/Libs/Crypt3Des.class.php	/^class Crypt3Des$/;"	c
 Cx	ThinkPHP/Library/Think/Template/TagLib/Cx.class.php	/^class Cx extends TagLib {$/;"	c
 D	ThinkPHP/Common/functions.php	/^function D($name='',$layer='') {$/;"	f
 D	ThinkPHP/Mode/Api/functions.php	/^function D($name='',$layer='') {$/;"	f
@@ -134,6 +136,7 @@ DetectAndSwitch	ThinkPHP/Library/Org/Util/CodeSwitch.class.php	/^	static functio
 Dirs	ThinkPHP/Library/Vendor/EaseTemplate/template.core.php	/^	function Dirs($/;"	f
 Dispatcher	ThinkPHP/Library/Think/Dispatcher.class.php	/^class Dispatcher {$/;"	c
 Dispatcher	ThinkPHP/Mode/Api/Dispatcher.class.php	/^class Dispatcher {$/;"	c
+Down	Application/Api/Libs/SD_DownLoad.class.php	/^    public function Down($pFilePath,$downstart = 0, $pFileName = '') {$/;"	f
 DumpInspector	ThinkPHP/Library/Vendor/Boris/DumpInspector.php	/^class DumpInspector implements Inspector {$/;"	c
 DumpTest	ThinkPHP/Library/Vendor/spyc/tests/DumpTest.php	/^class DumpTest extends PHPUnit_Framework_TestCase {$/;"	c
 E	ThinkPHP/Common/functions.php	/^function E($msg, $code=0) {$/;"	f
@@ -235,6 +238,9 @@ GIF_string	ThinkPHP/Library/Think/Image/Driver/GIF.class.php	/^	private $GIF_str
 GZDict	ThinkPHP/Library/Org/Util/Date.class.php	/^            $GZDict = array($/;"	v
 Gd	ThinkPHP/Library/Think/Image/Driver/Gd.class.php	/^class Gd{$/;"	c
 GetAnimation	ThinkPHP/Library/Think/Image/Driver/GIF.class.php	/^	public function GetAnimation ( ) {$/;"	f
+GetFileName	Application/Api/Libs/SD_DownLoad.class.php	/^    private function GetFileName() {$/;"	f
+GetHead	Application/Api/Libs/HttpDownload.class.php	/^	public function GetHead($headname) {$/;"	f
+GetHtml	Application/Api/Libs/HttpDownload.class.php	/^	public function GetHtml() {$/;"	f
 Global_len	ThinkPHP/Library/Think/Image/Driver/GIF.class.php	/^		$Global_len = 2 << ( ord ( $this->BUF [ 0  ] { 10 } ) & 0x07 );$/;"	v
 Global_rgb	ThinkPHP/Library/Think/Image/Driver/GIF.class.php	/^		$Global_rgb = substr ( $this->BUF [ 0  ], 13,$/;"	v
 GoURL	ThinkPHP/Library/Vendor/EaseTemplate/template.core.php	/^				$GoURL = urldecode(preg_replace("\/.+?REFERER=(.+?)!!!\/","\\\\1",$EXTS[$Last]));$/;"	v
@@ -275,6 +281,7 @@ HtmTime	ThinkPHP/Library/Vendor/EaseTemplate/template.core.php	/^			$this->HtmTi
 HtmTime	ThinkPHP/Library/Vendor/EaseTemplate/template.core.php	/^	var $HtmTime	= '180';			\/\/秒为单位，默认三分钟$/;"	v
 Html	ThinkPHP/Library/Think/Template/TagLib/Html.class.php	/^class Html extends TagLib{$/;"	c
 Http	ThinkPHP/Library/Org/Net/Http.class.php	/^class Http {$/;"	c
+HttpDownload	Application/Api/Libs/HttpDownload.class.php	/^class HttpDownload $/;"	c
 I	ThinkPHP/Common/functions.php	/^function I($name,$default='',$filter=null,$datas=null) {$/;"	f
 I	ThinkPHP/Mode/Api/functions.php	/^function I($name,$default='',$filter=null) {$/;"	f
 IMG	ThinkPHP/Library/Think/Image/Driver/GIF.class.php	/^		$this->IMG  = 1;$/;"	v
@@ -302,8 +309,12 @@ IncFile	ThinkPHP/Library/Vendor/EaseTemplate/template.core.php	/^	var $IncFile	=
 IncList	ThinkPHP/Library/Vendor/EaseTemplate/template.core.php	/^	var $IncList	= array();			\/\/引入文件列表$/;"	v
 IndentTest	ThinkPHP/Library/Vendor/spyc/tests/IndentTest.php	/^class IndentTest extends PHPUnit_Framework_TestCase {$/;"	c
 IndexController	Application/Home/Controller/IndexController.class.php	/^class IndexController extends Controller {$/;"	c
+IniFile	Application/Api/Libs/SD_DownLoad.class.php	/^    private function IniFile() {$/;"	f
 Inspector	ThinkPHP/Library/Vendor/Boris/Inspector.php	/^interface Inspector {$/;"	i
 IpLocation	ThinkPHP/Library/Org/Net/IpLocation.class.php	/^class IpLocation {$/;"	c
+IsContentType	Application/Api/Libs/HttpDownload.class.php	/^	public function IsContentType($ctype) {$/;"	f
+IsGetOK	Application/Api/Libs/HttpDownload.class.php	/^	public function IsGetOK() {$/;"	f
+IsText	Application/Api/Libs/HttpDownload.class.php	/^	public function IsText() {$/;"	f
 ItemVarName	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_foreach.php	/^        $ItemVarName = '$' . trim($item, '\\'"') . '@';$/;"	v
 JSONstringify	Application/Api/View/Test/api.html	/^			function JSONstringify(Json){$/;"	f
 JSONstringify	Application/Runtime/Cache/Api/01d100f00284f24fca7885d879fc1f6b.php	/^			function JSONstringify(Json){$/;"	f
@@ -382,6 +393,7 @@ Object	ThinkPHP/Library/Behavior/FireShowPageTraceBehavior.class.php	/^         
 Object	ThinkPHP/Library/Behavior/FireShowPageTraceBehavior.class.php	/^                $Object = $this->encodeTable($Object);$/;"	v
 Object	ThinkPHP/Library/Behavior/FireShowPageTraceBehavior.class.php	/^                $Object = array('Class'=>get_class($Object),$/;"	v
 Object	ThinkPHP/Library/Behavior/FireShowPageTraceBehavior.class.php	/^            $Object = $this->encodeObject($Object);$/;"	v
+OpenUrl	Application/Api/Libs/HttpDownload.class.php	/^	function OpenUrl($url) {$/;"	f
 Options	ThinkPHP/Library/Behavior/FireShowPageTraceBehavior.class.php	/^            $Options = func_get_arg(3);$/;"	v
 Options	ThinkPHP/Library/Behavior/FireShowPageTraceBehavior.class.php	/^        $Options = array();$/;"	v
 Oracle	ThinkPHP/Library/Think/Db/Driver/Oracle.class.php	/^class Oracle extends Db{$/;"	c
@@ -413,6 +425,8 @@ Pdo	ThinkPHP/Library/Think/Db/Driver/Pdo.class.php	/^class Pdo extends Db{$/;"	c
 Pgsql	ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php	/^class Pgsql extends Db{$/;"	c
 PrintTrace	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_configfileparser.php	/^    static function PrintTrace()$/;"	f
 PrintTrace	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_templateparser.php	/^    static function PrintTrace()$/;"	f
+PrivateOpenHost	Application/Api/Libs/HttpDownload.class.php	/^	public function PrivateOpenHost() {$/;"	f
+PrivateStartSession	Application/Api/Libs/HttpDownload.class.php	/^	public function PrivateStartSession() {$/;"	f
 QINIU_RSF_HOST	ThinkPHP/Library/Think/Upload/Driver/Qiniu/QiniuStorage.class.php	/^		public $QINIU_RSF_HOST = 'http:\/\/rsf.qbox.me';$/;"	v
 QINIU_RS_HOST	ThinkPHP/Library/Think/Upload/Driver/Qiniu/QiniuStorage.class.php	/^		public $QINIU_RS_HOST = 'http:\/\/rs.qbox.me';$/;"	v
 QINIU_UP_HOST	ThinkPHP/Library/Think/Upload/Driver/Qiniu/QiniuStorage.class.php	/^		public $QINIU_UP_HOST = 'http:\/\/up.qiniu.com';$/;"	v
@@ -442,6 +456,7 @@ RunType	ThinkPHP/Library/Vendor/EaseTemplate/template.core.php	/^		$this->RunTyp
 RunType	ThinkPHP/Library/Vendor/EaseTemplate/template.core.php	/^	  	 	$this->RunType		= (@substr(@sprintf('%o', @fileperms($this->CacheDir)), -3)==777 && is_dir($this->CacheDir))?'Cache':'Replace';$/;"	v
 S	ThinkPHP/Common/functions.php	/^function S($name,$value='',$options=null) {$/;"	f
 S	ThinkPHP/Mode/Api/functions.php	/^function S($name,$value='',$options=null) {$/;"	f
+SD_DownLoad	Application/Api/Libs/SD_DownLoad.class.php	/^class SD_DownLoad $/;"	c
 SMARTY_DIR	ThinkPHP/Library/Vendor/Smarty/Smarty.class.php	/^    define('SMARTY_DIR', dirname(__FILE__) . DS);$/;"	d
 SMARTY_MBSTRING	ThinkPHP/Library/Vendor/Smarty/Smarty.class.php	/^    define('SMARTY_MBSTRING', function_exists('mb_strlen'));$/;"	d
 SMARTY_PLUGINS_DIR	ThinkPHP/Library/Vendor/Smarty/Smarty.class.php	/^    define('SMARTY_PLUGINS_DIR', SMARTY_DIR . 'plugins' . DS);$/;"	d
@@ -455,9 +470,15 @@ SXDict	ThinkPHP/Library/Org/Util/Date.class.php	/^            $SXDict = array('�
 Sae	ThinkPHP/Library/Think/Log/Driver/Sae.class.php	/^class Sae {$/;"	c
 Sae	ThinkPHP/Library/Think/Storage/Driver/Sae.class.php	/^class Sae extends Storage{$/;"	c
 Sae	ThinkPHP/Library/Think/Upload/Driver/Sae.class.php	/^class Sae{$/;"	c
+SaveToBin	Application/Api/Libs/HttpDownload.class.php	/^	public function SaveToBin($savefilename) {$/;"	f
+SaveToText	Application/Api/Libs/HttpDownload.class.php	/^	public function SaveToText($savefilename) {$/;"	f
 SavedGroups	ThinkPHP/Library/Vendor/spyc/Spyc.php	/^  private $SavedGroups = array();$/;"	v
+Send	Application/Api/Libs/SD_DownLoad.class.php	/^    private function Send() {$/;"	f
+SendError	Application/Api/Libs/SD_DownLoad.class.php	/^    public function SendError() {$/;"	f
 Server	ThinkPHP/Library/Vendor/EaseTemplate/template.core.php	/^		$this->Server		= (is_array($GLOBALS['_SERVER']))?$GLOBALS['_SERVER']:$_SERVER;$/;"	v
 ServerController	Application/Api/Controller/ServerController.class.php	/^class ServerController extends YarController implements ApiConst$/;"	c
+SetHeader	Application/Api/Libs/SD_DownLoad.class.php	/^    private function SetHeader() {$/;"	f
+SetStart	Application/Api/Libs/SD_DownLoad.class.php	/^    private function SetStart($downstart) {$/;"	f
 ShallowParser	ThinkPHP/Library/Vendor/Boris/ShallowParser.php	/^class ShallowParser {$/;"	c
 Shmop	ThinkPHP/Library/Think/Cache/Driver/Shmop.class.php	/^class Shmop extends Cache {$/;"	c
 ShowPageTraceBehavior	ThinkPHP/Library/Behavior/ShowPageTraceBehavior.class.php	/^class ShowPageTraceBehavior {$/;"	c
@@ -603,6 +624,7 @@ TPC_yyToken	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_configfile
 TP_yyStackEntry	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_templateparser.php	/^class TP_yyStackEntry$/;"	c
 TP_yyToken	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_templateparser.php	/^class TP_yyToken implements ArrayAccess$/;"	c
 TagLib	ThinkPHP/Library/Think/Template/TagLib.class.php	/^class TagLib {$/;"	c
+TaskController	Application/Api/Controller/TaskController.class.php	/^class TaskController extends ServerController$/;"	c
 Template	ThinkPHP/Library/Think/Template.class.php	/^class  Template {$/;"	c
 TemplateDir	ThinkPHP/Library/Think/Template/Driver/Ease.class.php	/^        $TemplateDir    = substr(THEME_PATH,0,-1);$/;"	v
 TemplateDir	ThinkPHP/Library/Vendor/EaseTemplate/template.core.php	/^		$this->TemplateDir	= (defined('NewTemplate')?NewTemplate:( (trim($set['TemplateDir']) != '')?$set['TemplateDir']:'template') ).'\/';$/;"	v
@@ -768,9 +790,13 @@ __clone	ThinkPHP/Library/Vendor/Smarty/Smarty.class.php	/^    public function __
 __compile_dir	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_utility.php	/^        $__compile_dir = $smarty->getCompileDir();$/;"	v
 __construct	Application/Api/Controller/ClientController.class.php	/^	public function __construct()$/;"	f
 __construct	Application/Api/Controller/ServerController.class.php	/^	public function __construct()$/;"	f
+__construct	Application/Api/Controller/TaskController.class.php	/^	public function __construct()$/;"	f
 __construct	Application/Api/Controller/TestController.class.php	/^	public function __construct()$/;"	f
 __construct	Application/Api/Controller/UserController.class.php	/^	public function __construct()$/;"	f
 __construct	Application/Api/Libs/Bcrypt.class.php	/^    public function __construct($options = array())$/;"	f
+__construct	Application/Api/Libs/Crypt3Des.class.php	/^    public function __construct($key, $iv = '0102030405060708', $pack=true)$/;"	f
+__construct	Application/Api/Libs/HttpDownload.class.php	/^	public function  __construct($url){$/;"	f
+__construct	Application/Api/Libs/SD_DownLoad.class.php	/^    public function __construct() {$/;"	f
 __construct	ThinkPHP/Library/Behavior/ChromeShowPageTraceBehavior.class.php	/^    private function __construct()$/;"	f
 __construct	ThinkPHP/Library/Org/Net/IpLocation.class.php	/^    public function __construct($filename = "UTFWry.dat") {$/;"	f
 __construct	ThinkPHP/Library/Org/Util/ArrayList.class.php	/^    public function __construct($elements = array()) {$/;"	f
@@ -2481,6 +2507,7 @@ alt	ThinkPHP/Library/Vendor/Smarty/plugins/function.html_image.php	/^    $alt = 
 analyze_user_acl	ThinkPHP/Library/Think/Upload/Driver/Bcs/bcs.class.php	/^	private function analyze_user_acl($acl) {$/;"	f
 anchor	ThinkPHP/Common/functions.php	/^        $anchor =   $info['fragment'];$/;"	v
 api	Application/Api/Controller/TestController.class.php	/^	public function api()$/;"	f
+apis	Application/Api/Controller/TestController.class.php	/^		$apis = array($/;"	v
 appError	ThinkPHP/Library/Think/Think.class.php	/^    static public function appError($errno, $errstr, $errfile, $errline) {$/;"	f
 appException	ThinkPHP/Library/Think/Think.class.php	/^    static public function appException($e) {$/;"	f
 appId	ThinkPHP/Library/Org/Util/Rbac.class.php	/^            $appId	=	$app['id'];$/;"	v
@@ -2506,8 +2533,10 @@ arg	ThinkPHP/Library/Vendor/phpRPC/phprpc_date.php	/^            $arg = func_get
 arg_list	ThinkPHP/Library/Vendor/TemplateLite/internal/compile.include.php	/^	$arg_list = array();$/;"	v
 arg_list	ThinkPHP/Library/Vendor/TemplateLite/internal/compile.section_start.php	/^	$arg_list = array();$/;"	v
 arg_value	ThinkPHP/Library/Vendor/TemplateLite/internal/compile.include.php	/^			$arg_value = $arg_value ? 'true' : 'false';$/;"	v
-argcs	Application/Api/Controller/ServerController.class.php	/^		$argcs = explode(',', $params);$/;"	v
-argcs	Application/Api/Controller/UserController.class.php	/^		$argcs = $this->extractParams($params);$/;"	v
+argcs	Application/Api/Controller/ServerController.class.php	/^			$this->argcs = array("caocao11");$/;"	v
+argcs	Application/Api/Controller/ServerController.class.php	/^			$this->argcs = json_decode($params, true);$/;"	v
+argcs	Application/Api/Controller/ServerController.class.php	/^	public    $argcs  = array();$/;"	v
+argcs	Application/Api/Controller/UserController.class.php	/^		$argcs = $this->argcs;$/;"	v
 args	ThinkPHP/Library/Behavior/ChromeShowPageTraceBehavior.class.php	/^        $args = func_get_args();$/;"	v
 args	ThinkPHP/Library/Behavior/FireShowPageTraceBehavior.class.php	/^        $args = func_get_args();$/;"	v
 args	ThinkPHP/Library/Behavior/FireShowPageTraceBehavior.class.php	/^    $args = func_get_args();$/;"	v
@@ -2762,6 +2791,7 @@ block_data	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_template.ph
 block_data	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_template.php	/^    public $block_data = array();$/;"	v
 block_nesting_level	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_templateparser.php	/^        $this->block_nesting_level = 0;$/;"	v
 block_nesting_level	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_templateparser.php	/^    $this->block_nesting_level = count($this->compiler->_tag_stack);$/;"	v
+block_size	Application/Api/Libs/Crypt3Des.class.php	/^        $block_size = mcrypt_get_block_size('tripledes', 'cbc');$/;"	v
 blocklvl	ThinkPHP/Library/Vendor/SmartTemplate/class.smarttemplatedebugger.php	/^			$blocklvl  =  0;$/;"	v
 body	ThinkPHP/Library/Think/Upload/Driver/Bcs/requestcore.class.php	/^		$this->body = $body;$/;"	v
 body	ThinkPHP/Library/Think/Upload/Driver/Bcs/requestcore.class.php	/^	public $body;$/;"	v
@@ -2982,6 +3012,7 @@ checkMime	ThinkPHP/Library/Think/Upload.class.php	/^    private function checkMi
 checkMongoId	ThinkPHP/Library/Think/Model/MongoModel.class.php	/^    protected function checkMongoId(&$result){$/;"	f
 checkOrder	ThinkPHP/Library/Think/Model/ViewModel.class.php	/^    protected function checkOrder($order='') {$/;"	f
 checkReadonlyField	ThinkPHP/Library/Think/Model/AdvModel.class.php	/^    protected function checkReadonlyField(&$data) {$/;"	f
+checkRequest	Application/Api/Controller/ServerController.class.php	/^	protected function checkRequest($params, $status, $method, $funcType)$/;"	f
 checkRootPath	ThinkPHP/Library/Think/Upload/Driver/Bcs.class.php	/^    public function checkRootPath($rootpath){$/;"	f
 checkRootPath	ThinkPHP/Library/Think/Upload/Driver/Ftp.class.php	/^    public function checkRootPath($rootpath){$/;"	f
 checkRootPath	ThinkPHP/Library/Think/Upload/Driver/Local.class.php	/^    public function checkRootPath($rootpath){$/;"	f
@@ -3499,6 +3530,7 @@ connection	ThinkPHP/Library/Vendor/phpRPC/phprpc_client.php	/^            $conne
 connection	ThinkPHP/Library/Vendor/phpRPC/phprpc_client.php	/^        $connection = isset($header['connection']) ? $header['connection'][0] : 'close';$/;"	v
 constant	ThinkPHP/Library/Vendor/TemplateLite/class.compiler.php	/^						$constant = str_replace($find, "", $_match[0][2]);$/;"	v
 contains	ThinkPHP/Library/Org/Util/ArrayList.class.php	/^    public function contains($element) {$/;"	f
+content	Application/Api/Libs/SD_DownLoad.class.php	/^	        	 $content	=	fread($this->mFileHandle);$/;"	v
 content	Application/Api/Libs/Utility.class.php	/^        $content = curl_exec($ch);$/;"	v
 content	ThinkPHP/Common/functions.php	/^        $content    =   'namespace {'.$content;$/;"	v
 content	ThinkPHP/Common/functions.php	/^        $content    =   preg_replace('\/namespace\\s(.*?);\/','namespace \\\\1{',$content,1);$/;"	v
@@ -3740,6 +3772,9 @@ d	ThinkPHP/Library/Vendor/phpRPC/bigint.php	/^        $d = floor(0x8000 \/ ($b[$
 d	ThinkPHP/Library/Vendor/phpRPC/phprpc_date.php	/^            $d = $args[2];$/;"	v
 d	ThinkPHP/Library/Vendor/phpRPC/phprpc_date.php	/^            $d = $this->day;$/;"	v
 d	ThinkPHP/Library/Vendor/spyc/tests/RoundTripTest.php	/^        $d = Spyc::YAMLDump($c);        \/\/ Re-dump the data$/;"	v
+data	Application/Api/Controller/ServerController.class.php	/^	protected function data($code=NULL, $data = array())$/;"	f
+data	Application/Api/Libs/Crypt3Des.class.php	/^        $data = $this->removeBR(base64_encode($data));$/;"	v
+data	Application/Api/Libs/Crypt3Des.class.php	/^        $data = mcrypt_generic($td, $input);$/;"	v
 data	ThinkPHP/Common/functions.php	/^                    $data   =   filter_var($data,is_int($filter)?$filter:filter_id($filter));$/;"	v
 data	ThinkPHP/Common/functions.php	/^                    $data   =   is_array($data)?array_map_recursive($filter,$data):$filter($data); \/\/ 参数过滤$/;"	v
 data	ThinkPHP/Common/functions.php	/^                $data   =   array_map_recursive($filter,$data); \/\/ 参数过滤$/;"	v
@@ -3967,6 +4002,7 @@ decode	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_resource_eval.p
 decode	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_resource_string.php	/^    protected function decode($string)$/;"	f
 decodeHtmlName	Application/Api/Libs/Utility.class.php	/^    public static function decodeHtmlName($str) {$/;"	f
 decodeProperties	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_template.php	/^    public function decodeProperties($properties, $cache = false)$/;"	f
+decrypt	Application/Api/Libs/Crypt3Des.class.php	/^    public function decrypt($encrypted)$/;"	f
 decrypt	ThinkPHP/Library/Think/Crypt.class.php	/^    public static function decrypt($data,$key){$/;"	f
 decrypt	ThinkPHP/Library/Think/Crypt/Driver/Base64.class.php	/^    public static function decrypt($data,$key) {$/;"	f
 decrypt	ThinkPHP/Library/Think/Crypt/Driver/Crypt.class.php	/^    public static function decrypt($str,$key) {$/;"	f
@@ -3974,6 +4010,8 @@ decrypt	ThinkPHP/Library/Think/Crypt/Driver/Des.class.php	/^    public static fu
 decrypt	ThinkPHP/Library/Think/Crypt/Driver/Think.class.php	/^    public static function decrypt($data,$key) {$/;"	f
 decrypt	ThinkPHP/Library/Think/Crypt/Driver/Xxtea.class.php	/^    public static function decrypt($str, $key) {$/;"	f
 decryptString	ThinkPHP/Library/Vendor/phpRPC/phprpc_server.php	/^    function decryptString($str, $level) {$/;"	f
+decrypted	Application/Api/Libs/Crypt3Des.class.php	/^        $decrypted = $this->removePadding($decrypted);$/;"	v
+decrypted	Application/Api/Libs/Crypt3Des.class.php	/^        $decrypted = mdecrypt_generic($td, $encrypted);$/;"	v
 defaultMethod	Application/Api/Controller/ClientController.class.php	/^	protected $defaultMethod = 'get';$/;"	v
 defaultMethod	ThinkPHP/Library/Think/Controller/RestController.class.php	/^    protected   $defaultMethod  =   'get';$/;"	v
 defaultType	Application/Api/Controller/ClientController.class.php	/^	protected $defaultType = 'json';$/;"	v
@@ -4019,6 +4057,7 @@ depr	ThinkPHP/Library/Think/Route.class.php	/^        $depr   =   C('URL_PATHINF
 depr	ThinkPHP/Library/Think/View.class.php	/^        $depr       =   C('TMPL_FILE_DEPR');$/;"	v
 depr	ThinkPHP/Mode/Api/Dispatcher.class.php	/^            $depr   =   C('URL_PATHINFO_DEPR');$/;"	v
 depr	ThinkPHP/Mode/Api/Dispatcher.class.php	/^        $depr = C('URL_PATHINFO_DEPR');$/;"	v
+des	Application/Api/Controller/ServerController.class.php	/^			$des = new Crypt3Des($this->key, $this->iv, $this->pack);$/;"	v
 destination	ThinkPHP/Library/Think/Log.class.php	/^            $destination = C('LOG_PATH').date('y_m_d').'.log';        $/;"	v
 destination	ThinkPHP/Library/Think/Log.class.php	/^            $destination = C('LOG_PATH').date('y_m_d').'.log';$/;"	v
 destination	ThinkPHP/Library/Think/Log/Driver/File.class.php	/^            $destination = $this->config['log_path'].date('y_m_d').'.log';$/;"	v
@@ -4071,6 +4110,7 @@ doFunctionList	ThinkPHP/Library/Vendor/Hprose/HproseHttpServer.php	/^    private
 doInvoke	ThinkPHP/Library/Vendor/Hprose/HproseHttpServer.php	/^    private function doInvoke() {$/;"	f
 doParse	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_configfileparser.php	/^    function doParse($yymajor, $yytokenvalue)$/;"	f
 doParse	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_templateparser.php	/^    function doParse($yymajor, $yytokenvalue)$/;"	f
+doc	Application/Api/Controller/TestController.class.php	/^	public function doc()$/;"	f
 docId	ThinkPHP/Library/Vendor/Boris/ShallowParser.php	/^      $docId = $match[2];$/;"	v
 docs	ThinkPHP/Library/Vendor/EaseTemplate/template.core.php	/^					$docs = str_replace('\\"','"',$docs);$/;"	v
 docs	ThinkPHP/Library/Vendor/EaseTemplate/template.core.php	/^					$docs = str_replace('\\"','"',$str);$/;"	v
@@ -4156,6 +4196,7 @@ encodeTable	ThinkPHP/Library/Behavior/FireShowPageTraceBehavior.class.php	/^    
 encode_file_name	ThinkPHP/Library/Vendor/TemplateLite/class.template.php	/^	var $encode_file_name		=	true;	\/\/ Set this to false if you do not want the name of the compiled\/cached file to be md5 encoded.$/;"	v
 encoded_value	ThinkPHP/Library/Behavior/FireShowPageTraceBehavior.class.php	/^        $encoded_value = $this->json_encode($value);$/;"	v
 encoding	ThinkPHP/Library/Vendor/Smarty/plugins/shared.mb_unicode.php	/^        $encoding = mb_internal_encoding();$/;"	v
+encrypt	Application/Api/Libs/Crypt3Des.class.php	/^    public function encrypt($input)$/;"	f
 encrypt	ThinkPHP/Library/Think/Crypt.class.php	/^    public static function encrypt($data,$key,$expire=0){$/;"	f
 encrypt	ThinkPHP/Library/Think/Crypt/Driver/Base64.class.php	/^    public static function encrypt($data,$key,$expire=0) {$/;"	f
 encrypt	ThinkPHP/Library/Think/Crypt/Driver/Crypt.class.php	/^    public static function encrypt($str,$key,$expire=0){$/;"	f
@@ -4170,6 +4211,7 @@ encrypt	ThinkPHP/Library/Vendor/phpRPC/phprpc_server.php	/^        $this->encryp
 encrypt	ThinkPHP/Library/Vendor/phpRPC/phprpc_server.php	/^        $this->encrypt = false;$/;"	v
 encrypt	ThinkPHP/Library/Vendor/phpRPC/phprpc_server.php	/^    var $encrypt;$/;"	v
 encryptString	ThinkPHP/Library/Vendor/phpRPC/phprpc_server.php	/^    function encryptString($str, $level) {$/;"	f
+encrypted	Application/Api/Libs/Crypt3Des.class.php	/^        $encrypted = base64_decode($encrypted);$/;"	v
 end	ThinkPHP/Library/Think/Template.class.php	/^        $end        =   $this->config['taglib_end'];        $/;"	v
 end	ThinkPHP/Library/Think/Template.class.php	/^        $end        =   $this->config['taglib_end'];$/;"	v
 end	ThinkPHP/Library/Think/Template.class.php	/^        $end   = $this->config['taglib_end'];$/;"	v
@@ -4192,6 +4234,7 @@ equals	ThinkPHP/Library/Vendor/Hprose/HproseCommon.php	/^    public function equ
 equals	ThinkPHP/Library/Vendor/phpRPC/phprpc_date.php	/^    function equals($when) {$/;"	f
 equation	ThinkPHP/Library/Vendor/Smarty/plugins/function.math.php	/^            $equation = preg_replace("\/\\b$key\\b\/", " \\$params['$key'] ", $equation);$/;"	v
 equation	ThinkPHP/Library/Vendor/Smarty/plugins/function.math.php	/^    $equation = $params['equation'];$/;"	v
+errcode	Application/Api/Controller/TestController.class.php	/^	public function errcode()$/;"	f
 errno	ThinkPHP/Library/Vendor/Hprose/HproseHttpClient.php	/^            $errno = curl_errno($this->curl);$/;"	v
 errno	ThinkPHP/Library/Vendor/phpRPC/phprpc_server.php	/^                    $this->errno = $errno;$/;"	v
 errno	ThinkPHP/Library/Vendor/phpRPC/phprpc_server.php	/^                $errno = E_COMPILE_ERROR;$/;"	v
@@ -4329,6 +4372,9 @@ error_text	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_templatecom
 error_types	ThinkPHP/Library/Vendor/Hprose/HproseHttpServer.php	/^        $this->error_types = $error_types;$/;"	v
 error_types	ThinkPHP/Library/Vendor/Hprose/HproseHttpServer.php	/^        $this->error_types = E_ALL & ~E_NOTICE;$/;"	v
 error_unassigned	ThinkPHP/Library/Vendor/Smarty/Smarty.class.php	/^    public $error_unassigned = false;$/;"	v
+errors	Application/Api/Controller/ServerController.class.php	/^		$this->errors = C('ERRORS');$/;"	v
+errors	Application/Api/Controller/ServerController.class.php	/^	public	  $errors = array(); $/;"	v
+errors	Application/Api/Controller/TestController.class.php	/^		$errors = C("ERRORS");$/;"	v
 errors	ThinkPHP/Library/Think/Db/Driver/Sqlsrv.class.php	/^        $errors = sqlsrv_errors();$/;"	v
 errstr	ThinkPHP/Library/Vendor/phpRPC/phprpc_server.php	/^                    $this->errstr = $errstr;$/;"	v
 errstr	ThinkPHP/Library/Vendor/phpRPC/phprpc_server.php	/^                $errstr = preg_replace('\/ in <b>.*<\\\/b>$\/', '', $match[2]);$/;"	v
@@ -4472,7 +4518,6 @@ extra	ThinkPHP/Library/Vendor/phpRPC/compat.php	/^            $extra = substr($d
 extra	ThinkPHP/Library/Vendor/phpRPC/compat.php	/^        $extra     = "";$/;"	v
 extra_attrs	ThinkPHP/Library/Vendor/Smarty/plugins/function.html_select_date.php	/^    $extra_attrs = '';$/;"	v
 extra_attrs	ThinkPHP/Library/Vendor/Smarty/plugins/function.html_select_time.php	/^    $extra_attrs = '';$/;"	v
-extractParams	Application/Api/Controller/ServerController.class.php	/^	protected function extractParams($params) 	$/;"	f
 extralen	ThinkPHP/Library/Vendor/phpRPC/compat.php	/^            $extralen = $extralen[1];$/;"	v
 extralen	ThinkPHP/Library/Vendor/phpRPC/compat.php	/^            $extralen = unpack("v", substr($data, 8, 2));$/;"	v
 extralen	ThinkPHP/Library/Vendor/phpRPC/compat.php	/^        $extralen  = 0;$/;"	v
@@ -4750,6 +4795,7 @@ found	Application/Api/Libs/Utility.class.php	/^    	$found = true; \/\/ keep rep
 found	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_templatecompilerbase.php	/^                                $found = true;$/;"	v
 found	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_templatecompilerbase.php	/^                            $found = true;$/;"	v
 found	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_templatecompilerbase.php	/^                    $found = false;$/;"	v
+fp	Application/Api/Libs/HttpDownload.class.php	/^		$fp = fopen($savefilename,"w") or die("写入文件 $savefilename 失败！");$/;"	v
 fp	ThinkPHP/Library/Org/Net/Http.class.php	/^        $fp = @fsockopen(($ip ? $ip : $host), $port, $errno, $errstr, $timeout);$/;"	v
 fp	ThinkPHP/Library/Org/Net/Http.class.php	/^        $fp = fopen($local,"w");$/;"	v
 fp	ThinkPHP/Library/Org/Net/IpLocation.class.php	/^        $this->fp = 0;$/;"	v
@@ -4804,8 +4850,11 @@ func	ThinkPHP/Library/Think/Cache/Driver/Sqlite.class.php	/^        $func = $thi
 func	ThinkPHP/Library/Think/Upload.class.php	/^            $func     = $rule[0];$/;"	v
 funcNames	ThinkPHP/Library/Vendor/Hprose/HproseHttpServer.php	/^        $this->funcNames = array();$/;"	v
 funcNames	ThinkPHP/Library/Vendor/Hprose/HproseHttpServer.php	/^    private $funcNames;$/;"	v
+funcType	Application/Api/Controller/TaskController.class.php	/^		$this->funcType = array($/;"	v
+funcType	Application/Api/Controller/TaskController.class.php	/^	public $funcType;$/;"	v
 funcType	Application/Api/Controller/UserController.class.php	/^		$this->funcType = array($/;"	v
-funcType	Application/Api/Controller/UserController.class.php	/^	public $funcType = array();$/;"	v
+funcType	Application/Api/Controller/UserController.class.php	/^	public $funcType;$/;"	v
+funcTypeCurr	Application/Api/Controller/ServerController.class.php	/^		$funcTypeCurr = $funcType[$status];$/;"	v
 func_name	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_templateparser.php	/^            $func_name = strtolower($this->yystack[$this->yyidx + -3]->minor);$/;"	v
 function	ThinkPHP/Library/Vendor/Hprose/HproseClient.php	/^        $function = $this->namespace . $function;$/;"	v
 function	ThinkPHP/Library/Vendor/Hprose/HproseHttpServer.php	/^                $function = $this->functions[$aliasName];$/;"	v
@@ -5215,7 +5264,7 @@ headers	ThinkPHP/Library/Think/Upload/Driver/Qiniu/QiniuStorage.class.php	/^	   
 headers	ThinkPHP/Library/Think/Upload/Driver/Upyun.class.php	/^        $headers = explode("\\r\\n", $text);$/;"	v
 headersSent	ThinkPHP/Library/Behavior/FireShowPageTraceBehavior.class.php	/^    protected function headersSent(&$Filename, &$Linenum)$/;"	f
 headers_array	ThinkPHP/Library/Vendor/Hprose/HproseHttpClient.php	/^            $headers_array = array($this->getCookie(),$/;"	v
-hehe	api.php	/^$hehe = '111222';$/;"	v
+headname	Application/Api/Libs/HttpDownload.class.php	/^		$headname = strtolower($headname);$/;"	v
 height	ThinkPHP/Library/Think/Image.class.php	/^    public function height(){$/;"	f
 height	ThinkPHP/Library/Think/Image/Driver/Gd.class.php	/^                $height = $h * $scale;$/;"	v
 height	ThinkPHP/Library/Think/Image/Driver/Gd.class.php	/^    public function height(){$/;"	f
@@ -5306,6 +5355,10 @@ httpDesc_	ThinkPHP/Library/Behavior/UpgradeNoticeBehavior.class.php	/^    protec
 http_response_firstline	ThinkPHP/Library/Vendor/Hprose/HproseHttpClient.php	/^                $http_response_firstline = array_shift($http_response_header); $/;"	v
 http_response_header	ThinkPHP/Library/Vendor/Hprose/HproseHttpClient.php	/^                $http_response_header = explode("\\r\\n", $response_headers);$/;"	v
 http_response_header	ThinkPHP/Library/Vendor/Hprose/HproseHttpClient.php	/^            $http_response_header = $f->responseHeaders(false);$/;"	v
+httpstas	Application/Api/Libs/HttpDownload.class.php	/^		$httpstas = fgets($this->m_fp,256);$/;"	v
+httpstas	Application/Api/Libs/HttpDownload.class.php	/^		$httpstas = split(" ",$httpstas);$/;"	v
+httpv	Application/Api/Libs/HttpDownload.class.php	/^			$httpv = "HTTP\/1.0";$/;"	v
+httpv	Application/Api/Libs/HttpDownload.class.php	/^			$httpv = "HTTP\/1.1";$/;"	v
 hyphen	ThinkPHP/Library/Org/Util/String.class.php	/^        $hyphen = chr(45);\/\/ "-"$/;"	v
 i	ThinkPHP/Common/functions.php	/^                            $i = $k;$/;"	v
 i	ThinkPHP/Library/Org/Net/IpLocation.class.php	/^            $i = floor(($l + $u) \/ 2);  \/\/ 计算近似中间记录$/;"	v
@@ -5488,6 +5541,7 @@ inline	ThinkPHP/Library/Vendor/spyc/Spyc.php	/^      $inline = preg_replace('\/{
 inner	ThinkPHP/Library/Vendor/Smarty/plugins/function.html_table.php	/^    $inner = 'cols';$/;"	v
 innerValue	ThinkPHP/Library/Vendor/spyc/Spyc.php	/^      $innerValue = trim(substr ($value, 1, -1));$/;"	v
 inner_str	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_configfileparser.php	/^        $inner_str = substr($qstr, 1, strlen($qstr)-2);$/;"	v
+input	Application/Api/Libs/Crypt3Des.class.php	/^        $input = $this->padding($input);$/;"	v
 input	ThinkPHP/Common/functions.php	/^                    $input  =  $_GET;$/;"	v
 input	ThinkPHP/Common/functions.php	/^                    $input  =  $_POST;$/;"	v
 input	ThinkPHP/Common/functions.php	/^                $input  =   explode($depr,trim($_SERVER['PATH_INFO'],$depr));            $/;"	v
@@ -5537,6 +5591,7 @@ internalError	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_template
 internalError	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_templateparser.php	/^    $this->internalError = true;$/;"	v
 internalError	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_templateparser.php	/^    private $internalError = false;$/;"	v
 intersect	ThinkPHP/Library/Think/Auth.class.php	/^                $intersect = array_intersect_assoc($REQUEST,$param);$/;"	v
+introduction	Application/Api/Controller/TestController.class.php	/^	public function introduction()$/;"	f
 intvalue	ThinkPHP/Library/Vendor/spyc/Spyc.php	/^      $intvalue = (int)$value;$/;"	v
 invalidLoadedCache	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_cacheresource.php	/^    public static function invalidLoadedCache(Smarty $smarty)$/;"	f
 invalidate	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_cacheresource_keyvaluestore.php	/^    protected function invalidate($cid = null, $resource_name = null, $cache_id = null, $compile_id = null, $resource_uid = null)$/;"	f
@@ -5633,6 +5688,9 @@ items	ThinkPHP/Library/Think/Upload/Driver/Upyun.class.php	/^        $items = ar
 iterations	ThinkPHP/Library/Think/Crypt/Driver/Des.class.php	/^      $iterations = ((count($keys) == 32) ? 3 : 9); \/\/single or triple des$/;"	v
 iterations	ThinkPHP/Library/Think/Crypt/Driver/Des.class.php	/^      $iterations = ((strlen($key) >= 24) ? 3 : 1);$/;"	v
 iterator	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_utility.php	/^            $iterator = new DirectoryIterator($source);$/;"	v
+iv	Application/Api/Controller/ServerController.class.php	/^	private   $iv    = "OTk1M2Qw";$/;"	v
+iv	Application/Api/Libs/Crypt3Des.class.php	/^            $iv = '0102030405060708';$/;"	v
+iv	Application/Api/Libs/Crypt3Des.class.php	/^    private $iv = null;$/;"	v
 j	ThinkPHP/Library/Vendor/phpRPC/bigint.php	/^            $j = 0;$/;"	v
 j	ThinkPHP/Library/Vendor/phpRPC/bigint.php	/^        $j = 0;$/;"	v
 j	ThinkPHP/Library/Vendor/phpRPC/dhparams.php	/^                $j = $i;$/;"	v
@@ -5671,6 +5729,8 @@ keepAliveTimeout	ThinkPHP/Library/Vendor/Hprose/HproseHttpClient.php	/^        $
 keepAliveTimeout	ThinkPHP/Library/Vendor/Hprose/HproseHttpClient.php	/^    protected $keepAliveTimeout;$/;"	v
 keepSession	ThinkPHP/Library/Vendor/Hprose/HproseHttpClient.php	/^    public static function keepSession() {$/;"	f
 keep_phprpc_cookie_in_session	ThinkPHP/Library/Vendor/phpRPC/phprpc_client.php	/^    function keep_phprpc_cookie_in_session() {$/;"	f
+key	Application/Api/Controller/ServerController.class.php	/^	private   $key   = "267ac2ed67f292ff77c4a0b8";$/;"	v
+key	Application/Api/Libs/Crypt3Des.class.php	/^    private $key = null;$/;"	v
 key	ThinkPHP/Common/functions.php	/^            $key  = $item;$/;"	v
 key	ThinkPHP/Library/Behavior/BuildLiteBehavior.class.php	/^            $key = strtoupper($key);$/;"	v
 key	ThinkPHP/Library/Think/Cache.class.php	/^            $key =  array_shift($value);$/;"	v
@@ -5969,6 +6029,7 @@ limitStr	ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php	/^        $limitStr   
 limitStr	ThinkPHP/Library/Think/Db/Driver/Sqlite.class.php	/^        $limitStr    = '';$/;"	v
 limitStr	ThinkPHP/Library/Think/Db/Driver/Sqlsrv.class.php	/^            $limitStr	=	'(T1.ROW_NUMBER BETWEEN '.$limit[0].' + 1 AND '.$limit[0].' + '.$limit[1].')';$/;"	v
 limitStr	ThinkPHP/Library/Think/Db/Driver/Sqlsrv.class.php	/^            $limitStr = '(T1.ROW_NUMBER BETWEEN 1 AND '.$limit[0].")";$/;"	v
+line	Application/Api/Libs/HttpDownload.class.php	/^			$line = str_replace("\\"","",trim(fgets($this->m_fp,256)));$/;"	v
 line	Application/Api/Libs/Utility.class.php	/^    	$line   =   explode("<br \/>", rtrim(ltrim($str,'<code>'),'<\/code>'));$/;"	v
 line	ThinkPHP/Library/Behavior/ChromeShowPageTraceBehavior.class.php	/^            $line=isset($trace['line'])?$trace['line']:'unknown line';$/;"	v
 line	ThinkPHP/Library/Vendor/Boris/ReadlineClient.php	/^      $line = readline($/;"	v
@@ -5997,6 +6058,7 @@ lineArray	ThinkPHP/Library/Vendor/spyc/Spyc.php	/^        $lineArray = $this->re
 lineArray	ThinkPHP/Library/Vendor/spyc/Spyc.php	/^      $lineArray = $this->_parseLine($line);$/;"	v
 linePath	ThinkPHP/Library/Vendor/spyc/Spyc.php	/^    $linePath = $this->path;$/;"	v
 lineno	ThinkPHP/Library/Vendor/Boris/ReadlineClient.php	/^    $lineno = 1;$/;"	v
+lines	Application/Api/Libs/HttpDownload.class.php	/^				$lines = split(":",$line);$/;"	v
 lines	ThinkPHP/Library/Vendor/spyc/Spyc.php	/^    $lines = explode("\\n",$input);$/;"	v
 link	ThinkPHP/Library/Think/Upload/Driver/Ftp.class.php	/^        $this->link = ftp_connect($host, $port, $timeout);$/;"	v
 link	ThinkPHP/Library/Think/Upload/Driver/Ftp.class.php	/^    private $link;$/;"	v
@@ -6076,7 +6138,7 @@ logToInsightConsole	ThinkPHP/Library/Behavior/FireShowPageTraceBehavior.class.ph
 logToInsightConsole	ThinkPHP/Library/Behavior/FireShowPageTraceBehavior.class.php	/^            $this->logToInsightConsole = $this->to('request')->console($console);$/;"	v
 logToInsightConsole	ThinkPHP/Library/Behavior/FireShowPageTraceBehavior.class.php	/^    protected $logToInsightConsole = null;$/;"	v
 logger	ThinkPHP/Library/Behavior/ChromeShowPageTraceBehavior.class.php	/^        $logger = self::getInstance();$/;"	v
-login	Application/Api/Controller/UserController.class.php	/^	public function login($params, $cmd, $opt, $status, $method)$/;"	f
+login	Application/Api/Controller/UserController.class.php	/^	public function login($params, $status, $method)$/;"	f
 login	ThinkPHP/Library/Think/Upload/Driver/Ftp.class.php	/^    private function login(){$/;"	f
 logo	ThinkPHP/Library/Think/App.class.php	/^    static public function logo(){$/;"	f
 logs	ThinkPHP/Library/Behavior/ChromeShowPageTraceBehavior.class.php	/^        $logs = array();$/;"	v
@@ -6114,6 +6176,49 @@ m1	ThinkPHP/Library/Behavior/CheckActionRouteBehavior.class.php	/^        $m1   
 m1	ThinkPHP/Library/Think/Route.class.php	/^        $m1 = explode('\/',$regx);$/;"	v
 m2	ThinkPHP/Library/Behavior/CheckActionRouteBehavior.class.php	/^        $m2     =   explode('\/',$rule);$/;"	v
 m2	ThinkPHP/Library/Think/Route.class.php	/^        $m2 = explode('\/',$rule);$/;"	v
+mDownStart	Application/Api/Libs/SD_DownLoad.class.php	/^              	$this->mDownStart = $downstart;$/;"	v
+mDownStart	Application/Api/Libs/SD_DownLoad.class.php	/^              $this->mDownStart = 0;$/;"	v
+mDownStart	Application/Api/Libs/SD_DownLoad.class.php	/^    private $mDownStart;$/;"	v
+mFileHandle	Application/Api/Libs/SD_DownLoad.class.php	/^         $this->mFileHandle = fopen($this->mFilePath, 'rb');$/;"	v
+mFileHandle	Application/Api/Libs/SD_DownLoad.class.php	/^    private $mFileHandle;$/;"	v
+mFileName	Application/Api/Libs/SD_DownLoad.class.php	/^         $this->mFileName = empty($pFileName) ? $this->GetFileName() : $pFileName;$/;"	v
+mFileName	Application/Api/Libs/SD_DownLoad.class.php	/^    private $mFileName;$/;"	v
+mFilePath	Application/Api/Libs/SD_DownLoad.class.php	/^         $this->mFilePath = $pFilePath;$/;"	v
+mFilePath	Application/Api/Libs/SD_DownLoad.class.php	/^    private $mFilePath;$/;"	v
+mFileSize	Application/Api/Libs/SD_DownLoad.class.php	/^         $this->mFileSize = filesize($this->mFilePath);$/;"	v
+mFileSize	Application/Api/Libs/SD_DownLoad.class.php	/^    private $mFileSize;$/;"	v
+m_error	Application/Api/Libs/HttpDownload.class.php	/^			$this->m_error = "连接已经关闭！"; $/;"	v
+m_error	Application/Api/Libs/HttpDownload.class.php	/^			$this->m_error = $errstr;$/;"	v
+m_error	Application/Api/Libs/HttpDownload.class.php	/^		$this->m_error = "";$/;"	v
+m_error	Application/Api/Libs/HttpDownload.class.php	/^ 	private $m_error = "";$/;"	v
+m_fp	Application/Api/Libs/HttpDownload.class.php	/^		$this->m_fp = @fsockopen($this->m_host, $this->m_port, &$errno, &$errstr,10);$/;"	v
+m_fp	Application/Api/Libs/HttpDownload.class.php	/^ 	private $m_fp = "";$/;"	v
+m_host	Application/Api/Libs/HttpDownload.class.php	/^			$this->m_host = $urls["host"];$/;"	v
+m_host	Application/Api/Libs/HttpDownload.class.php	/^		$this->m_host = "";$/;"	v
+m_host	Application/Api/Libs/HttpDownload.class.php	/^ 	private $m_host = "";$/;"	v
+m_html	Application/Api/Libs/HttpDownload.class.php	/^		$this->m_html = "";$/;"	v
+m_html	Application/Api/Libs/HttpDownload.class.php	/^	private $m_html = "";$/;"	v
+m_httphead	Application/Api/Libs/HttpDownload.class.php	/^		$this->m_httphead = "" ;$/;"	v
+m_httphead	Application/Api/Libs/HttpDownload.class.php	/^	private $m_httphead = "" ;$/;"	v
+m_pass	Application/Api/Libs/HttpDownload.class.php	/^		$this->m_pass = "";$/;"	v
+m_pass	Application/Api/Libs/HttpDownload.class.php	/^ 	private $m_pass = "";$/;"	v
+m_path	Application/Api/Libs/HttpDownload.class.php	/^		$this->m_path = "\/";$/;"	v
+m_path	Application/Api/Libs/HttpDownload.class.php	/^ 	private $m_path = "\/";$/;"	v
+m_port	Application/Api/Libs/HttpDownload.class.php	/^		$this->m_port = "80";$/;"	v
+m_port	Application/Api/Libs/HttpDownload.class.php	/^ 	private $m_port = "80";$/;"	v
+m_query	Application/Api/Libs/HttpDownload.class.php	/^		$this->m_query = "";$/;"	v
+m_query	Application/Api/Libs/HttpDownload.class.php	/^ 	private $m_query = "";$/;"	v
+m_query	Application/Api/Libs/HttpDownload.class.php	/^     			$this->m_query = $urls["query"];$/;"	v
+m_scheme	Application/Api/Libs/HttpDownload.class.php	/^		$this->m_scheme = "http";$/;"	v
+m_scheme	Application/Api/Libs/HttpDownload.class.php	/^ 	private $m_scheme = "http";$/;"	v
+m_url	Application/Api/Libs/HttpDownload.class.php	/^		$this->m_url = "";$/;"	v
+m_url	Application/Api/Libs/HttpDownload.class.php	/^		$this->m_url = $url;$/;"	v
+m_url	Application/Api/Libs/HttpDownload.class.php	/^	private $m_url = "";$/;"	v
+m_urlpath	Application/Api/Libs/HttpDownload.class.php	/^		    $this->m_urlpath = $this->m_path;$/;"	v
+m_urlpath	Application/Api/Libs/HttpDownload.class.php	/^		$this->m_urlpath = "";$/;"	v
+m_urlpath	Application/Api/Libs/HttpDownload.class.php	/^ 	private $m_urlpath = "";$/;"	v
+m_user	Application/Api/Libs/HttpDownload.class.php	/^		$this->m_user = "";$/;"	v
+m_user	Application/Api/Libs/HttpDownload.class.php	/^ 	private $m_user = "";$/;"	v
 magicInfo	ThinkPHP/Library/Org/Util/Date.class.php	/^    public function magicInfo($type) {$/;"	f
 mail_parms	ThinkPHP/Library/Vendor/Smarty/plugins/function.mailto.php	/^    $mail_parms = array();$/;"	v
 mailto	ThinkPHP/Library/Vendor/Smarty/plugins/function.mailto.php	/^        $mailto = "&#109;&#97;&#105;&#108;&#116;&#111;&#58;";$/;"	v
@@ -7002,7 +7107,10 @@ p	ThinkPHP/Library/Vendor/EaseTemplate/template.core.php	/^	function p($/;"	f
 p	ThinkPHP/Library/Vendor/phpRPC/bigint.php	/^        $p = array(1);$/;"	v
 p	ThinkPHP/Library/Vendor/phpRPC/phprpc_client.php	/^            $p = strpos($body[$i], '=');$/;"	v
 p	ThinkPHP/Library/Vendor/phpRPC/phprpc_server.php	/^            $p = bigint_dec2num($session['p']);$/;"	v
+pack	Application/Api/Controller/ServerController.class.php	/^	private   $pack  = false;$/;"	v
 packip	ThinkPHP/Library/Org/Net/IpLocation.class.php	/^    private function packip($ip) {$/;"	f
+padding	Application/Api/Libs/Crypt3Des.class.php	/^    public function padding($data)$/;"	f
+padding_char	Application/Api/Libs/Crypt3Des.class.php	/^        $padding_char = $block_size - (strlen($data) % $block_size);$/;"	v
 page	ThinkPHP/Library/Think/Db.class.php	/^            $page    =  $page>0 ? $page : 1;$/;"	v
 page	ThinkPHP/Library/Think/Db/Driver/Mongo.class.php	/^                    $page    = $options['page'];$/;"	v
 page	ThinkPHP/Library/Think/Db/Driver/Mongo.class.php	/^                $page    = $page?$page:1;$/;"	v
@@ -7039,6 +7147,10 @@ param	ThinkPHP/Library/Think/Upload/Driver/Bcs.class.php	/^        $param = arra
 param	ThinkPHP/Library/Think/Upload/Driver/Qiniu/QiniuStorage.class.php	/^			$param = $this->buildUrlParam();$/;"	v
 parameter	ThinkPHP/Library/Think/Page.class.php	/^        $this->parameter  = empty($parameter) ? $_GET : $parameter;$/;"	v
 parameter	ThinkPHP/Library/Think/Page.class.php	/^    public $parameter; \/\/ 分页跳转时要带的参数$/;"	v
+params	Application/Api/Controller/ClientController.class.php	/^			$params = array($/;"	v
+params	Application/Api/Controller/ServerController.class.php	/^			$params = str_replace(" ", "+", $params);$/;"	v
+params	Application/Api/Controller/ServerController.class.php	/^			$params = str_replace('&quot;', '"', $params);$/;"	v
+params	Application/Api/Controller/ServerController.class.php	/^			$params = stripslashes($params);$/;"	v
 params	Application/Api/Libs/YarClient.class.php	/^		$this->params = $params;$/;"	v
 params	Application/Api/Libs/YarClient.class.php	/^	public $params = array();$/;"	v
 params	ThinkPHP/Library/Think/App.class.php	/^                    $params =  $method->getParameters();$/;"	v
@@ -7466,6 +7578,7 @@ print	ThinkPHP/Library/Vendor/Smarty/plugins/function.counter.php	/^        $pri
 print	ThinkPHP/Library/Vendor/Smarty/plugins/function.counter.php	/^        $print = empty($counter['assign']);$/;"	v
 print	ThinkPHP/Library/Vendor/Smarty/plugins/function.cycle.php	/^        $print = false;$/;"	v
 print	ThinkPHP/Library/Vendor/Smarty/plugins/function.cycle.php	/^    $print = (isset($params['print'])) ? (bool)$params['print'] : true;$/;"	v
+printError	Application/Api/Libs/HttpDownload.class.php	/^	public function printError() {$/;"	f
 private_name	ThinkPHP/Library/Vendor/phpRPC/compat.php	/^            $private_name = "\\0'.$classname.'\\0$name";$/;"	v
 process	ThinkPHP/Library/Vendor/Hprose/HproseIOStream.php	/^        $this->process = $process;$/;"	v
 process	ThinkPHP/Library/Vendor/Hprose/HproseIOStream.php	/^    protected $process;$/;"	v
@@ -7786,6 +7899,8 @@ remainder	ThinkPHP/Library/Vendor/phpRPC/phprpc_date.php	/^            $remainde
 remainder	ThinkPHP/Library/Vendor/phpRPC/phprpc_date.php	/^            $remainder = $days % 1461;$/;"	v
 remainder	ThinkPHP/Library/Vendor/phpRPC/phprpc_date.php	/^            $remainder = $days % 36524;$/;"	v
 remove	ThinkPHP/Library/Org/Util/ArrayList.class.php	/^    public function remove($index) {$/;"	f
+removeBR	Application/Api/Libs/Crypt3Des.class.php	/^    public function removeBR($str) $/;"	f
+removePadding	Application/Api/Libs/Crypt3Des.class.php	/^    public function removePadding($str)$/;"	f
 removeRange	ThinkPHP/Library/Org/Util/ArrayList.class.php	/^    public function removeRange($offset , $length) {$/;"	f
 remove_header	ThinkPHP/Library/Think/Upload/Driver/Bcs/requestcore.class.php	/^	public function remove_header($key) {$/;"	f
 remove_xss	Application/Api/Libs/Utility.class.php	/^    public static function remove_xss($val) {$/;"	f
@@ -8136,6 +8251,7 @@ ret	Application/Api/Controller/ClientController.class.php	/^			$ret = array('err
 ret	Application/Api/Controller/ClientController.class.php	/^			$ret = array('error' => '暂时不支持xml类型');$/;"	v
 ret	Application/Api/Controller/ClientController.class.php	/^		$ret = $this->YarClient->ret;$/;"	v
 ret	Application/Api/Controller/ClientController.class.php	/^	protected $ret   = array();$/;"	v
+ret	Application/Api/Controller/UserController.class.php	/^		$ret = $this->checkRequest($params, $status, $method, $this->funcType);\/\/检测客户端请求，并解析参数$/;"	v
 ret	Application/Api/Libs/YarClient.class.php	/^		$this->ret = array('reval'=>$reval, 'callinfo'=>$callinfo);$/;"	v
 ret	Application/Api/Libs/YarClient.class.php	/^	public $ret    = array();$/;"	v
 ret	ThinkPHP/Library/Behavior/UpgradeNoticeBehavior.class.php	/^        $ret = json_decode($txt, true);$/;"	v
@@ -8607,8 +8723,10 @@ setInc	ThinkPHP/Library/Think/Model/MongoModel.class.php	/^    public function s
 setInspector	ThinkPHP/Library/Vendor/Boris/Boris.php	/^  public function setInspector($inspector) {$/;"	f
 setInspector	ThinkPHP/Library/Vendor/Boris/EvalWorker.php	/^  public function setInspector($inspector) {$/;"	f
 setInstance	ThinkPHP/Library/Behavior/FireShowPageTraceBehavior.class.php	/^    public static function setInstance($instance)$/;"	f
+setIv	Application/Api/Libs/Crypt3Des.class.php	/^    public function setIv($iv, $pack=true)$/;"	f
 setKeepAlive	ThinkPHP/Library/Vendor/Hprose/HproseHttpClient.php	/^    public function setKeepAlive($keepAlive = true) {$/;"	f
 setKeepAliveTimeout	ThinkPHP/Library/Vendor/Hprose/HproseHttpClient.php	/^    public function setKeepAliveTimeout($timeout) {$/;"	f
+setKey	Application/Api/Libs/Crypt3Des.class.php	/^    public function setKey($key, $pack=true)$/;"	f
 setKeyLength	ThinkPHP/Library/Vendor/phpRPC/phprpc_client.php	/^    function setKeyLength($keylen) {$/;"	f
 setLazyDec	ThinkPHP/Library/Think/Model/AdvModel.class.php	/^    public function setLazyDec($field,$step=1,$lazyTime=0) {$/;"	f
 setLazyInc	ThinkPHP/Library/Think/Model/AdvModel.class.php	/^    public function setLazyInc($field,$step=1,$lazyTime=0) {$/;"	f
@@ -9166,6 +9284,7 @@ subst	ThinkPHP/Library/Vendor/SmartTemplate/class.smarttemplateparser.php	/^				
 substr	ThinkPHP/Library/Think/Upload/Driver/Bcs/requestcore.class.php	/^				$substr = substr ( $host, $pos + 1 );$/;"	v
 subtree	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_parsetree.php	/^                $subtree = $this->subtrees[$key]->to_smarty_php();$/;"	v
 subtrees	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_parsetree.php	/^    public $subtrees = Array();$/;"	v
+success	Application/Api/Controller/TestController.class.php	/^		$success = C("RQ_SUCCESS");$/;"	v
 success	Application/Runtime/Cache/Api/01d100f00284f24fca7885d879fc1f6b.php	/^					success:function(ret){$/;"	j
 success	ThinkPHP/Library/Think/Controller.class.php	/^    protected function success($message='',$jumpUrl='',$ajax=false) {$/;"	f
 success	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_write_file.php	/^        $success = rename($_tmp_file, $_filepath);$/;"	v
@@ -9315,6 +9434,10 @@ tags	ThinkPHP/Library/Think/Template/TagLib/Cx.class.php	/^    protected $tags  
 tags	ThinkPHP/Library/Think/Template/TagLib/Html.class.php	/^    protected $tags   =  array($/;"	v
 tags	ThinkPHP/Library/Vendor/TemplateLite/class.compiler.php	/^		$tags		= array();		\/\/ all original tags$/;"	v
 tags	ThinkPHP/Library/Vendor/TemplateLite/class.compiler.php	/^		$tags = $_match[1];$/;"	v
+taskadd	Application/Api/Controller/TaskController.class.php	/^	public function taskadd()$/;"	f
+tasklist	Application/Api/Controller/TaskController.class.php	/^	public function tasklist($params, $status, $method)$/;"	f
+td	Application/Api/Libs/Crypt3Des.class.php	/^        $td = mcrypt_module_open( MCRYPT_3DES, '', MCRYPT_MODE_CBC, '');$/;"	v
+td	Application/Api/Libs/Crypt3Des.class.php	/^        $td = mcrypt_module_open( MCRYPT_3DES,'',MCRYPT_MODE_CBC,'');$/;"	v
 td_attr	ThinkPHP/Library/Vendor/Smarty/plugins/function.html_table.php	/^    $td_attr = '';$/;"	v
 temp	ThinkPHP/Library/Think/Crypt/Driver/Des.class.php	/^            $temp = $left;$/;"	v
 temp	ThinkPHP/Library/Think/Crypt/Driver/Des.class.php	/^          $temp = $left; $left = $right; $right = $temp; \/\/unreverse left and right$/;"	v
@@ -10032,7 +10155,7 @@ upper_string	ThinkPHP/Library/Vendor/Smarty/plugins/modifier.capitalize.php	/^  
 upper_string	ThinkPHP/Library/Vendor/Smarty/plugins/modifier.capitalize.php	/^    $upper_string = preg_replace("!(^|[^\\p{L}'])([\\p{Ll}])!ueS", "stripslashes('\\\\1').ucfirst(stripslashes('\\\\2'))", $string); $/;"	v
 uri	ThinkPHP/Library/Think/Upload/Driver/Upyun.class.php	/^        $uri = "\/{$this->config['bucket']}\/{$path}";$/;"	v
 uri	ThinkPHP/Library/Vendor/Smarty/plugins/function.fetch.php	/^                $uri = !empty($uri_parts['path']) ? $uri_parts['path'] : '\/';$/;"	v
-url	Application/Api/Controller/ClientController.class.php	/^			$url = C('HOST') . '\/' . $req['cmd'];$/;"	v
+url	Application/Api/Controller/ClientController.class.php	/^			$url = self::API_HOST . '\/' . $req['cmd'];$/;"	v
 url	Application/Api/Libs/YarClient.class.php	/^		$this->url = $url;	$/;"	v
 url	Application/Api/Libs/YarClient.class.php	/^	public $url    = "";$/;"	v
 url	ThinkPHP/Common/functions.php	/^                    $url    =  substr_replace($url,'',0,strlen($rule));$/;"	v
@@ -10094,6 +10217,8 @@ urlDownloadImg	Application/Api/Libs/Utility.class.php	/^    public static functi
 urlMode	ThinkPHP/Library/Think/Dispatcher.class.php	/^	        $urlMode        =   C('URL_MODEL');$/;"	v
 urlparts	ThinkPHP/Library/Vendor/phpRPC/phprpc_client.php	/^                $urlparts = parse_url($host);$/;"	v
 urlparts	ThinkPHP/Library/Vendor/phpRPC/phprpc_client.php	/^        $urlparts = parse_url($serverURL);$/;"	v
+urls	Application/Api/Libs/HttpDownload.class.php	/^		$urls = "";$/;"	v
+urls	Application/Api/Libs/HttpDownload.class.php	/^		$urls = @parse_url($url);$/;"	v
 useService	ThinkPHP/Library/Vendor/Hprose/HproseClient.php	/^    public function useService($url = '', $namespace = '') {$/;"	f
 useService	ThinkPHP/Library/Vendor/Hprose/HproseHttpClient.php	/^    public function useService($url = '', $namespace = '') {$/;"	f
 useService	ThinkPHP/Library/Vendor/phpRPC/phprpc_client.php	/^    function useService($serverURL, $username = NULL, $password = NULL) {$/;"	f

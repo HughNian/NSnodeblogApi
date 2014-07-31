@@ -87,13 +87,16 @@ class ClientController extends RestController implements ApiConst
 				$this->response($ret, $this->defaultType);
 			}
 			
-			if(isset($req['Accept'])) unset($req['Accept']);
-			if(isset($req['_'])) unset($req['_']);
+			$params = array(
+				"params" => $req['params'],
+				'status' => $req['status'],
+				'method' => $req['method']
+			);
 			
-			$url = C('HOST') . '/' . $req['cmd'];
+			$url = self::API_HOST . '/' . $req['cmd'];
 			$this->YarClient->url = $url;
 			$this->YarClient->method = $req['opt'];
-			$this->YarClient->params = $req;
+			$this->YarClient->params = $params;
 			$this->YarClient->run();
 			
 			//yar回调
