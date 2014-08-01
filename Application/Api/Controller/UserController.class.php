@@ -37,6 +37,7 @@ class UserController extends ServerController
 	public function login($params, $status, $method)
 	{	
 		$ret = $this->checkRequest($params, $status, $method, $this->funcType);//检测客户端请求，并解析参数
+		
 		if(!$ret['ret'] && $ret['code'] == $this->errors['RQ_TYPE_ERROR']['CODE']) {
 			return $this->data($this->errors['RQ_TYPE_ERROR']['CODE']);
 		}
