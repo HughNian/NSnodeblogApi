@@ -3012,7 +3012,7 @@ checkMime	ThinkPHP/Library/Think/Upload.class.php	/^    private function checkMi
 checkMongoId	ThinkPHP/Library/Think/Model/MongoModel.class.php	/^    protected function checkMongoId(&$result){$/;"	f
 checkOrder	ThinkPHP/Library/Think/Model/ViewModel.class.php	/^    protected function checkOrder($order='') {$/;"	f
 checkReadonlyField	ThinkPHP/Library/Think/Model/AdvModel.class.php	/^    protected function checkReadonlyField(&$data) {$/;"	f
-checkRequest	Application/Api/Controller/ServerController.class.php	/^	protected function checkRequest($params, $status, $method, $funcType)$/;"	f
+checkRequest	Application/Api/Controller/ServerController.class.php	/^	protected function checkRequest($params, $status, $method, $rqtype, $encrypt)$/;"	f
 checkRootPath	ThinkPHP/Library/Think/Upload/Driver/Bcs.class.php	/^    public function checkRootPath($rootpath){$/;"	f
 checkRootPath	ThinkPHP/Library/Think/Upload/Driver/Ftp.class.php	/^    public function checkRootPath($rootpath){$/;"	f
 checkRootPath	ThinkPHP/Library/Think/Upload/Driver/Local.class.php	/^    public function checkRootPath($rootpath){$/;"	f
@@ -4852,9 +4852,7 @@ funcNames	ThinkPHP/Library/Vendor/Hprose/HproseHttpServer.php	/^        $this->f
 funcNames	ThinkPHP/Library/Vendor/Hprose/HproseHttpServer.php	/^    private $funcNames;$/;"	v
 funcType	Application/Api/Controller/TaskController.class.php	/^		$this->funcType = array($/;"	v
 funcType	Application/Api/Controller/TaskController.class.php	/^	public $funcType;$/;"	v
-funcType	Application/Api/Controller/UserController.class.php	/^		$this->funcType = array($/;"	v
 funcType	Application/Api/Controller/UserController.class.php	/^	public $funcType;$/;"	v
-funcTypeCurr	Application/Api/Controller/ServerController.class.php	/^		$funcTypeCurr = $funcType[$status];$/;"	v
 func_name	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_templateparser.php	/^            $func_name = strtolower($this->yystack[$this->yyidx + -3]->minor);$/;"	v
 function	ThinkPHP/Library/Vendor/Hprose/HproseClient.php	/^        $function = $this->namespace . $function;$/;"	v
 function	ThinkPHP/Library/Vendor/Hprose/HproseHttpServer.php	/^                $function = $this->functions[$aliasName];$/;"	v
@@ -8251,7 +8249,7 @@ ret	Application/Api/Controller/ClientController.class.php	/^			$ret = array('err
 ret	Application/Api/Controller/ClientController.class.php	/^			$ret = array('error' => '暂时不支持xml类型');$/;"	v
 ret	Application/Api/Controller/ClientController.class.php	/^		$ret = $this->YarClient->ret;$/;"	v
 ret	Application/Api/Controller/ClientController.class.php	/^	protected $ret   = array();$/;"	v
-ret	Application/Api/Controller/UserController.class.php	/^		$ret = $this->checkRequest($params, $status, $method, $this->funcType);\/\/检测客户端请求，并解析参数$/;"	v
+ret	Application/Api/Controller/UserController.class.php	/^		$ret = $this->checkRequest($params, $status, $method, $rqtype = 'GET', $encrypt = false);\/\/检测客户端请求，并解析参数$/;"	v
 ret	Application/Api/Libs/YarClient.class.php	/^		$this->ret = array('reval'=>$reval, 'callinfo'=>$callinfo);$/;"	v
 ret	Application/Api/Libs/YarClient.class.php	/^	public $ret    = array();$/;"	v
 ret	ThinkPHP/Library/Behavior/UpgradeNoticeBehavior.class.php	/^        $ret = json_decode($txt, true);$/;"	v

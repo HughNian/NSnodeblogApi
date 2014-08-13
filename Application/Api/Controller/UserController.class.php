@@ -13,13 +13,6 @@ class UserController extends ServerController
 
 	public function __construct()
 	{
-		$this->funcType = array(
-			array('opt' => 'login', 'type'=>'get', 'encrypt' => 0),
-			array('opt' => 'register', 'type' =>'post', 'encrypt' => 0),
-			array('opt' => 'edit', 'type' =>'put', 'encrypt' => 0),
-			array('opt' => 'del', 'type' => 'delete', 'encrypt' => 0),
-			array('opt' => 'repwd', 'type' => 'post', 'encrypt' => 0),
-		);
 		parent::__construct();
 	}
 
@@ -36,10 +29,10 @@ class UserController extends ServerController
 	 */
 	public function login($params, $status, $method)
 	{	
-		$ret = $this->checkRequest($params, $status, $method, $this->funcType);//检测客户端请求，并解析参数
+		$ret = $this->checkRequest($params, $status, $method, $rqtype = 'GET', $encrypt = false);//检测客户端请求，并解析参数
 		
 		if(!$ret['ret'] && $ret['code'] == $this->errors['RQ_TYPE_ERROR']['CODE']) {
-			return $this->data($this->errors['RQ_TYPE_ERROR']['CODE']);
+			return $this->data($this->errors['RQ_TYPE_ERROR']['CODE']);        //请求类型错误
 		}
 		
 		$username = $password = NULL;
