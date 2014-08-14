@@ -22,12 +22,13 @@ return array(
 	),
 
 	/****************Restful URL规则******************/
+	'URL_MODEL' => 1,
 	'URL_ROUTER_ON'   => true,
 	'URL_ROUTE_RULES'=>array(
 		
 		/***USER API***/
-	    'user/login/:params' => array('Client/output?cmd=user&opt=login', 'status=0'),
-		'user/register/:params' => array('Client/output?cmd=user&opt=register', 'status=1'),
+	    'user/login/:params' => array('Client/output?cmd=user&opt=login'),
+		'user/register/:params' => array('Client/output?cmd=user&opt=register'),
 
 	),
 );

@@ -13,11 +13,11 @@
         <p class="refpurpose"><span class="refname">API Doc</span> &mdash; <span class="dc-title">文档说明</span></p>
         <ol>
             <li>此接口文档仅适用于Android/iPhone等软件版本</li>
-			<li>接口域名：暂未定(统一入口)</li>
-			<li>访问url：http://api.jiangsugqt.org/cmd/op,测试地址为 http://192.168.0.117:8008/cmd/op</li>
-			<li>参数采用POST方式</li>
-			<li>接口参数格式 data={"param1":"xxx","param2":"xxx","param3":"xxx"}</li>
-			<li>返回形式(json字符窜)：{"result":"xxx","data":"xxx"}</li>
+			<li>接口域名：暂未定(内网测试地址为192.168.0.117:8009)</li>
+			<li>访问url：每个api说明都有相应的访问url</li>
+			<li>API采用Restful风格,需要客户端发起POST,GET,PUT,DELETE等请求类型</li>
+			<li>接口参数格式主要为json格式{"param1":"xxx","param2":"xxx","param3":"xxx"},如果遇到某个接口参数需要加密，测直接传入加密后的字符串</li>
+			<li>返回形式(json字符窜)：{"code":"xxx","data":"xxx"}</li>
             <li>参数与返回值说明中增加JsonArray与JsonObject两种类型。
                 <ul>
                     <li>JsonArray - 表明此参数/返回值将是以数组的形式提交/返回。其中的元素可能是 int/string/JsonObject。</li>
@@ -25,7 +25,6 @@
                     <li>JsonArray 与 JsonObject 可能相互嵌套。如 [{"a":[{"b":1},{"b":2}]},{"a":[{"b":3},{"b":4}]}]</li>
                 </ul>
             </li>
-			<li>(新增)对投票等方法需要加密操作，接口参数如：data=<font color="red">{time:"xxx","internal":{"param1":"xxx","param2":"xxx"}}</font>。其中data内部的json字符串(即红色标注的字串)需要经过3des加密，最后对该加密后的字符串进行urlencode</li>
         </ol>
     </div>
 </div>

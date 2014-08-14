@@ -62,12 +62,13 @@ class ClientController extends RestController implements ApiConst
 	 *
 	 */
 	public function output()
-	{	
+	{
 		if($this->_type == 'json') { //Rest请求如果为json, 返回json数据
 			if(!in_array($this->_method, $this->allowMethod)){
 				$ret = array('error'=>'请求类型出错');
 				$this->response($ret, $this->defaultType);
 			}
+			
 			$req = array();
 			$req = I("get.");
 			$req['method'] = $this->_method;
@@ -89,7 +90,6 @@ class ClientController extends RestController implements ApiConst
 			
 			$params = array(
 				"params" => $req['params'],
-				'status' => $req['status'],
 				'method' => $req['method']
 			);
 			

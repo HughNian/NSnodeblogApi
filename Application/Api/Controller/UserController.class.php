@@ -9,8 +9,6 @@ namespace Api\Controller;
  */
 class UserController extends ServerController
 {
-	public $funcType;
-
 	public function __construct()
 	{
 		parent::__construct();
@@ -21,20 +19,21 @@ class UserController extends ServerController
 	 *
 	 * @param: {string} username -用户名
 	 *         {stirng} passowrd -密码
-	 *
+	 * 
+	 * @url : 127.0.0.1:8008/user/login/{"username":"xxx","password":"xxx"}.json
 	 * @type: GET
      *
 	 * @return {json} list -用户信息
 	 *
 	 */
-	public function login($params, $status, $method)
+	public function login($params, $method)
 	{	
-		$ret = $this->checkRequest($params, $status, $method, $rqtype = 'GET', $encrypt = false);//检测客户端请求，并解析参数
+		$ret = $this->checkRequest($params, $method, $rqtype = 'GET', $encrypt = true);//检测客户端请求，并解析参数
 		
 		if(!$ret['ret'] && $ret['code'] == $this->errors['RQ_TYPE_ERROR']['CODE']) {
 			return $this->data($this->errors['RQ_TYPE_ERROR']['CODE']);        //请求类型错误
 		}
-		
+			
 		$username = $password = NULL;
 		$argcs = $this->argcs;
 		extract($argcs, EXTR_OVERWRITE);
@@ -49,15 +48,17 @@ class UserController extends ServerController
 	 *
 	 * @param: {string} username -用户名
 	 *         {string} password -密码
+	 *         {stirng} repassword -重置密码
 	 *
+	 * @url : 127.0.0.1:8008/user/register/{"username":"xxx","password":"xxx","repassword":"xxx"}.json
 	 * @type: POST
      *
 	 * @return {json} list -用户信息
 	 *
 	 */
-	public function register()
+	public function register($params, $method)
 	{
-	
+		
 	}
 
 }

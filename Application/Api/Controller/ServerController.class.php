@@ -34,18 +34,18 @@ class ServerController extends YarController implements ApiConst
 	 *
 	 *
 	 */
-	protected function checkRequest($params, $status, $method, $rqtype, $encrypt)
+	protected function checkRequest($params, $method, $rqtype, $encrypt)
 	{
 		if(strtoupper($method) != $rqtype) {
 			return array('ret' => false, 'code' => $this->errors['RQ_TYPE_ERROR']['CODE']);
 		}
-
+		
 		if($encrypt){ //加密参数进行解密操作
+			$params = urldecode($params);
 			$params = stripslashes($params);
 			$params = str_replace(" ", "+", $params);
 			$des = new Crypt3Des($this->key, $this->iv, $this->pack);
-			//$this->argcs = json_decode($des->decrypt($params), true);
-			$this->argcs = array("caocao11");
+			$this->argcs = json_decode($des->decrypt($params), true);
 		}
 
 		if(!$encrypt){

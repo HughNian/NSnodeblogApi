@@ -2533,7 +2533,7 @@ arg	ThinkPHP/Library/Vendor/phpRPC/phprpc_date.php	/^            $arg = func_get
 arg_list	ThinkPHP/Library/Vendor/TemplateLite/internal/compile.include.php	/^	$arg_list = array();$/;"	v
 arg_list	ThinkPHP/Library/Vendor/TemplateLite/internal/compile.section_start.php	/^	$arg_list = array();$/;"	v
 arg_value	ThinkPHP/Library/Vendor/TemplateLite/internal/compile.include.php	/^			$arg_value = $arg_value ? 'true' : 'false';$/;"	v
-argcs	Application/Api/Controller/ServerController.class.php	/^			$this->argcs = array("caocao11");$/;"	v
+argcs	Application/Api/Controller/ServerController.class.php	/^			$this->argcs = json_decode($des->decrypt($params), true);$/;"	v
 argcs	Application/Api/Controller/ServerController.class.php	/^			$this->argcs = json_decode($params, true);$/;"	v
 argcs	Application/Api/Controller/ServerController.class.php	/^	public    $argcs  = array();$/;"	v
 argcs	Application/Api/Controller/UserController.class.php	/^		$argcs = $this->argcs;$/;"	v
@@ -3012,7 +3012,7 @@ checkMime	ThinkPHP/Library/Think/Upload.class.php	/^    private function checkMi
 checkMongoId	ThinkPHP/Library/Think/Model/MongoModel.class.php	/^    protected function checkMongoId(&$result){$/;"	f
 checkOrder	ThinkPHP/Library/Think/Model/ViewModel.class.php	/^    protected function checkOrder($order='') {$/;"	f
 checkReadonlyField	ThinkPHP/Library/Think/Model/AdvModel.class.php	/^    protected function checkReadonlyField(&$data) {$/;"	f
-checkRequest	Application/Api/Controller/ServerController.class.php	/^	protected function checkRequest($params, $status, $method, $rqtype, $encrypt)$/;"	f
+checkRequest	Application/Api/Controller/ServerController.class.php	/^	protected function checkRequest($params, $method, $rqtype, $encrypt)$/;"	f
 checkRootPath	ThinkPHP/Library/Think/Upload/Driver/Bcs.class.php	/^    public function checkRootPath($rootpath){$/;"	f
 checkRootPath	ThinkPHP/Library/Think/Upload/Driver/Ftp.class.php	/^    public function checkRootPath($rootpath){$/;"	f
 checkRootPath	ThinkPHP/Library/Think/Upload/Driver/Local.class.php	/^    public function checkRootPath($rootpath){$/;"	f
@@ -4852,7 +4852,6 @@ funcNames	ThinkPHP/Library/Vendor/Hprose/HproseHttpServer.php	/^        $this->f
 funcNames	ThinkPHP/Library/Vendor/Hprose/HproseHttpServer.php	/^    private $funcNames;$/;"	v
 funcType	Application/Api/Controller/TaskController.class.php	/^		$this->funcType = array($/;"	v
 funcType	Application/Api/Controller/TaskController.class.php	/^	public $funcType;$/;"	v
-funcType	Application/Api/Controller/UserController.class.php	/^	public $funcType;$/;"	v
 func_name	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_templateparser.php	/^            $func_name = strtolower($this->yystack[$this->yyidx + -3]->minor);$/;"	v
 function	ThinkPHP/Library/Vendor/Hprose/HproseClient.php	/^        $function = $this->namespace . $function;$/;"	v
 function	ThinkPHP/Library/Vendor/Hprose/HproseHttpServer.php	/^                $function = $this->functions[$aliasName];$/;"	v
@@ -6136,7 +6135,7 @@ logToInsightConsole	ThinkPHP/Library/Behavior/FireShowPageTraceBehavior.class.ph
 logToInsightConsole	ThinkPHP/Library/Behavior/FireShowPageTraceBehavior.class.php	/^            $this->logToInsightConsole = $this->to('request')->console($console);$/;"	v
 logToInsightConsole	ThinkPHP/Library/Behavior/FireShowPageTraceBehavior.class.php	/^    protected $logToInsightConsole = null;$/;"	v
 logger	ThinkPHP/Library/Behavior/ChromeShowPageTraceBehavior.class.php	/^        $logger = self::getInstance();$/;"	v
-login	Application/Api/Controller/UserController.class.php	/^	public function login($params, $status, $method)$/;"	f
+login	Application/Api/Controller/UserController.class.php	/^	public function login($params, $method)$/;"	f
 login	ThinkPHP/Library/Think/Upload/Driver/Ftp.class.php	/^    private function login(){$/;"	f
 logo	ThinkPHP/Library/Think/App.class.php	/^    static public function logo(){$/;"	f
 logs	ThinkPHP/Library/Behavior/ChromeShowPageTraceBehavior.class.php	/^        $logs = array();$/;"	v
@@ -7149,6 +7148,7 @@ params	Application/Api/Controller/ClientController.class.php	/^			$params = arra
 params	Application/Api/Controller/ServerController.class.php	/^			$params = str_replace(" ", "+", $params);$/;"	v
 params	Application/Api/Controller/ServerController.class.php	/^			$params = str_replace('&quot;', '"', $params);$/;"	v
 params	Application/Api/Controller/ServerController.class.php	/^			$params = stripslashes($params);$/;"	v
+params	Application/Api/Controller/ServerController.class.php	/^			$params = urldecode($params);$/;"	v
 params	Application/Api/Libs/YarClient.class.php	/^		$this->params = $params;$/;"	v
 params	Application/Api/Libs/YarClient.class.php	/^	public $params = array();$/;"	v
 params	ThinkPHP/Library/Think/App.class.php	/^                    $params =  $method->getParameters();$/;"	v
@@ -7828,7 +7828,7 @@ reg	ThinkPHP/Library/Think/Template.class.php	/^        $reg   = '\/('.$begin.'b
 regex	ThinkPHP/Library/Think/Model.class.php	/^    public function regex($value,$rule) {$/;"	f
 regex	ThinkPHP/Library/Vendor/spyc/Spyc.php	/^    $regex = '\/("")|(\\'\\')\/';$/;"	v
 regex	ThinkPHP/Library/Vendor/spyc/Spyc.php	/^    $regex = '\/(?:(")|(?:\\'))((?(1)[^"]+|[^\\']+))(?(1)"|\\')\/';$/;"	v
-register	Application/Api/Controller/UserController.class.php	/^	public function register()$/;"	f
+register	Application/Api/Controller/UserController.class.php	/^	public function register($params, $method)$/;"	f
 register	ThinkPHP/Library/Vendor/Hprose/HproseClassManager.php	/^    public static function register($class, $alias) {$/;"	f
 registerAssertionHandler	ThinkPHP/Library/Behavior/FireShowPageTraceBehavior.class.php	/^    public function registerAssertionHandler($convertAssertionErrorsToExceptions = true, $throwAssertionExceptions = false)$/;"	f
 registerCacheResource	ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_templatebase.php	/^    public function registerCacheResource($type, Smarty_CacheResource $callback)$/;"	f
@@ -8249,7 +8249,7 @@ ret	Application/Api/Controller/ClientController.class.php	/^			$ret = array('err
 ret	Application/Api/Controller/ClientController.class.php	/^			$ret = array('error' => '暂时不支持xml类型');$/;"	v
 ret	Application/Api/Controller/ClientController.class.php	/^		$ret = $this->YarClient->ret;$/;"	v
 ret	Application/Api/Controller/ClientController.class.php	/^	protected $ret   = array();$/;"	v
-ret	Application/Api/Controller/UserController.class.php	/^		$ret = $this->checkRequest($params, $status, $method, $rqtype = 'GET', $encrypt = false);\/\/检测客户端请求，并解析参数$/;"	v
+ret	Application/Api/Controller/UserController.class.php	/^		$ret = $this->checkRequest($params, $method, $rqtype = 'GET', $encrypt = true);\/\/检测客户端请求，并解析参数$/;"	v
 ret	Application/Api/Libs/YarClient.class.php	/^		$this->ret = array('reval'=>$reval, 'callinfo'=>$callinfo);$/;"	v
 ret	Application/Api/Libs/YarClient.class.php	/^	public $ret    = array();$/;"	v
 ret	ThinkPHP/Library/Behavior/UpgradeNoticeBehavior.class.php	/^        $ret = json_decode($txt, true);$/;"	v
